@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "concurrently": "^7.1.0"
-  }
+  },
+  "name": "mike-dev-port",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimi5930/mike-miller-dev-port.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mimi5930/mike-miller-dev-port/issues"
+  },
+  "homepage": "https://github.com/mimi5930/mike-miller-dev-port#readme",
+  "description": ""
 }

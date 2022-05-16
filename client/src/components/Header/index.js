@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, Button, Link, Image, color } from '@chakra-ui/react';
+import { Flex, Button, Link, Image } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 const Header = props => {

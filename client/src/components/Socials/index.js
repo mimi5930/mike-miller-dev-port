@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { IconButton, Flex, Link, LinkOverlay } from '@chakra-ui/react';
+import { IconButton, Flex, Link } from '@chakra-ui/react';
 import { FiGithub, FiLinkedin, FiArrowUp } from 'react-icons/fi';
 
 const Socials = props => {

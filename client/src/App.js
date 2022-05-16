@@ -10,9 +10,11 @@ function App() {
   return (
     <Router>
       <Box
+        position="absolute"
         bgImage={require('./img/home-background.jpg')}
         bgSize="cover"
         height="100vh"
+        width="100vw"
         bgColor="black"
       >
         <Header />

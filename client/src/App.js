@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Homepage from './components/Homepage';
+import About from './components/About';
 import './App.css';
 import Socials from './components/Socials';
 import Header from './components/Header';
@@ -17,7 +17,7 @@ function App() {
       >
         <Header />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<About />} />
         </Routes>
         <Socials />
       </Box>

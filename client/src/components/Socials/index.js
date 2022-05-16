@@ -35,7 +35,7 @@ const Socials = props => {
                 colorScheme="blackAlpha"
                 icon={icons[0]}
                 size="lg"
-                _hover={{ bgColor: 'whiteAlpha.200' }}
+                _hover={{ bgColor: 'blackAlpha.900' }}
               />
             </Link>
             <Link
@@ -49,7 +49,7 @@ const Socials = props => {
                 colorScheme="blackAlpha"
                 icon={icons[1]}
                 size="lg"
-                _hover={{ bgColor: 'whiteAlpha.200' }}
+                _hover={{ bgColor: 'blackAlpha.900' }}
               />
             </Link>
           </Flex>

@@ -1,9 +1,15 @@
-import React from 'react';
-import { Flex, Button, Link, Image } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Flex, Button, Link, Image, color } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 const Header = props => {
   const navigate = useNavigate();
+
+  const [activeNav, setActiveNav] = useState('about');
+
+  const navClickHandler = event => {
+    setActiveNav(event.target.id);
+  };
 
   return (
     <header style={{ position: 'absolute', width: '100%' }}>
@@ -21,11 +27,29 @@ const Header = props => {
           alt="Website logo"
           onClick={() => navigate('/')}
         />
-        <Flex justifyContent="space-evenly" alignItems="center">
-          <Link mr="5">About</Link>
-          <Link mr="5">Portfolio</Link>
-          <Link mr="5">Resume</Link>
-          <Button variant="outline" colorScheme="white">
+        <Flex
+          justifyContent="space-evenly"
+          alignItems="center"
+          onClick={navClickHandler}
+        >
+          <Link id="about" mr="5" color={activeNav === 'about' && 'red.500'}>
+            About
+          </Link>
+          <Link
+            id="portfolio"
+            mr="5"
+            color={activeNav === 'portfolio' && 'green.500'}
+          >
+            Portfolio
+          </Link>
+          <Link id="resume" mr="5" color={activeNav === 'resume' && 'blue.500'}>
+            Resume
+          </Link>
+          <Button
+            variant="outline"
+            colorScheme={activeNav === 'contact' ? 'purple' : 'white'}
+            id="contact"
+          >
             Contact
           </Button>
         </Flex>

@@ -35,7 +35,7 @@ const About = props => {
           Michael Miller is an aspiring full-stack web developer and musician in
           Woodbury, Minnesota. Miller just graduated from the University of
           Minnesota's Coding Bootcamp through Trilogy Education Services and is
-          excited to find ways to utilize his new passion for coding.
+          excited to find ways to utilize his new-found passion for coding.
         </Text>
       </Flex>
     </section>

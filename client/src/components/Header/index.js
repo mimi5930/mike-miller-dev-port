@@ -25,20 +25,29 @@ const Header = props => {
           boxSize="90px"
           src={require('../../img/mike-logo.png')}
           alt="Website logo"
-          onClick={() => navigate('/')}
+          onClick={() => {
+            setActiveNav('about');
+            navigate('/');
+          }}
         />
         <Flex
           justifyContent="space-evenly"
           alignItems="center"
           onClick={navClickHandler}
         >
-          <Link id="about" mr="5" color={activeNav === 'about' && 'red.500'}>
+          <Link
+            id="about"
+            mr="5"
+            color={activeNav === 'about' && 'red.500'}
+            onClick={() => navigate('/')}
+          >
             About
           </Link>
           <Link
             id="portfolio"
             mr="5"
             color={activeNav === 'portfolio' && 'green.500'}
+            onClick={() => navigate('/portfolio')}
           >
             Portfolio
           </Link>

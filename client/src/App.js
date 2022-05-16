@@ -1,9 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import About from './components/About';
 import './App.css';
-import Socials from './components/Socials';
+
 import Header from './components/Header';
+import Socials from './components/Socials';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+
 import { Box } from '@chakra-ui/react';
 
 function App() {
@@ -20,6 +23,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<About />} />
+          <Route path="portfolio" element={<Portfolio />} />
         </Routes>
         <Socials />
       </Box>

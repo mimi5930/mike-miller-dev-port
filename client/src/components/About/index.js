@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Image, Flex } from '@chakra-ui/react';
+import { Heading, Text, Image, Flex } from '@chakra-ui/react';
 import React from 'react';
 
 const About = props => {

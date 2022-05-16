@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { IconButton, Button, Flex, Heading, Text } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import { IconButton, Flex, Link, LinkOverlay } from '@chakra-ui/react';
+import { FiGithub, FiLinkedin, FiArrowUp } from 'react-icons/fi';
 
 const Socials = props => {
-  const [currentIcon, setIcon] = useState(0);
-
+  // array of icons
   const icons = [<FiGithub />, <FiLinkedin />];
+
+  // Hooks
+  const [currentIcon, setIcon] = useState(0);
+  const [clickedStatus, setClickedStatus] = useState(false);
 
   useEffect(() => {
     let count = 0;
@@ -22,13 +24,46 @@ const Socials = props => {
 
   return (
     <footer style={{ position: 'fixed', bottom: '0', right: '0' }}>
-      <IconButton
-        borderRadius="50%"
-        m="8"
-        colorScheme="blackAlpha"
-        size="lg"
-        icon={icons[currentIcon]}
-      ></IconButton>
+      <Flex flexDir="column">
+        {clickedStatus && (
+          <Flex flexDir="column" alignItems="center">
+            <Link href="https://github.com/mimi5930" isExternal>
+              <IconButton
+                m="4"
+                aria-label="Git Hub"
+                isRound
+                colorScheme="blackAlpha"
+                icon={icons[0]}
+                size="lg"
+                _hover={{ bgColor: 'whiteAlpha.200' }}
+              />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/michael-miller-4b72331a2/"
+              isExternal
+            >
+              <IconButton
+                m="4"
+                aria-label="Linked In"
+                isRound
+                colorScheme="blackAlpha"
+                icon={icons[1]}
+                size="lg"
+                _hover={{ bgColor: 'whiteAlpha.200' }}
+              />
+            </Link>
+          </Flex>
+        )}
+        <IconButton
+          isRound
+          m="8"
+          colorScheme="blackAlpha.800"
+          size="lg"
+          onClick={() => setClickedStatus(!clickedStatus)}
+          icon={!clickedStatus ? icons[currentIcon] : <FiArrowUp />}
+          _hover={{ bgColor: 'whiteAlpha.200' }}
+        ></IconButton>
+      </Flex>
     </footer>
   );
 };

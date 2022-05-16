@@ -13,18 +13,18 @@ const Header = props => {
         p="15"
         backgroundColor="blackAlpha.900"
         color="white"
-        onClick={() => navigate('/')}
       >
         <Image
           cursor="pointer"
           boxSize="90px"
           src={require('../../img/mike-logo.png')}
           alt="Website logo"
+          onClick={() => navigate('/')}
         />
         <Flex justifyContent="space-evenly" alignItems="center">
-          <Link mr="15">About</Link>
-          <Link mr="15">Projects</Link>
-          <Link mr="15">Resume</Link>
+          <Link mr="5">About</Link>
+          <Link mr="5">Portfolio</Link>
+          <Link mr="5">Resume</Link>
           <Button variant="outline" colorScheme="white">
             Contact
           </Button>

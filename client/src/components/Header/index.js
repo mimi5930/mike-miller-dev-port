@@ -5,10 +5,16 @@ import { useNavigate } from 'react-router-dom';
 const Header = props => {
   const navigate = useNavigate();
 
-  const [activeNav, setActiveNav] = useState('about');
+  const [activeNav, setActiveNav] = useState(null);
 
   const navClickHandler = event => {
-    setActiveNav(event.target.id);
+    let id = event.target.id;
+    if (id) {
+      setActiveNav(id);
+      document.title = `Mike Miller - ${
+        id.charAt(0).toUpperCase() + id.slice(1)
+      }`;
+    }
   };
 
   return (
@@ -21,12 +27,14 @@ const Header = props => {
         color="white"
       >
         <Image
+          id="about"
           cursor="pointer"
           boxSize="90px"
           src={require('../../img/mike-logo.png')}
           alt="Website logo"
           onClick={() => {
-            setActiveNav('about');
+            document.title = 'Mike Miller';
+            setActiveNav(null);
             navigate('/');
           }}
         />
@@ -39,7 +47,7 @@ const Header = props => {
             id="about"
             mr="5"
             color={activeNav === 'about' && 'red.500'}
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/about')}
           >
             About
           </Link>

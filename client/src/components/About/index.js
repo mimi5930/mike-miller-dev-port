@@ -21,6 +21,7 @@ const About = props => {
           </Heading>
           <Image
             src={require('../../img/mike.jpg')}
+            alt="Mike's headshot"
             objectFit="cover"
             height="400px"
           />

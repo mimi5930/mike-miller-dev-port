@@ -32,10 +32,10 @@ const Socials = props => {
                 m="4"
                 aria-label="Git Hub"
                 isRound
-                colorScheme="blackAlpha"
+                colorScheme="whiteAlpha"
                 icon={icons[0]}
                 size="lg"
-                _hover={{ bgColor: 'blackAlpha.900' }}
+                _hover={{ bgColor: 'whiteAlpha.800' }}
               />
             </Link>
             <Link
@@ -46,10 +46,10 @@ const Socials = props => {
                 m="4"
                 aria-label="Linked In"
                 isRound
-                colorScheme="blackAlpha"
+                colorScheme="whiteAlpha"
                 icon={icons[1]}
                 size="lg"
-                _hover={{ bgColor: 'blackAlpha.900' }}
+                _hover={{ bgColor: 'whiteAlpha.800' }}
               />
             </Link>
           </Flex>
@@ -57,11 +57,11 @@ const Socials = props => {
         <IconButton
           isRound
           m="8"
-          colorScheme="blackAlpha.800"
+          colorScheme="whiteAlpha"
           size="lg"
           onClick={() => setClickedStatus(!clickedStatus)}
           icon={!clickedStatus ? icons[currentIcon] : <FiArrowUp />}
-          _hover={{ bgColor: 'whiteAlpha.200' }}
+          _hover={{ bgColor: 'whiteAlpha.800' }}
         ></IconButton>
       </Flex>
     </footer>

@@ -11,8 +11,10 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Textarea
+  Textarea,
+  FormErrorMessage
 } from '@chakra-ui/react';
+import * as EmailValidator from 'email-validator';
 
 const Contact = ({ isOpen, onClose }) => {
   const initialRef = useRef();
@@ -22,6 +24,45 @@ const Contact = ({ isOpen, onClose }) => {
     email: '',
     message: ''
   });
+
+  const [error, setError] = useState('');
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value
+    });
+  };
+
+  const cancelHandler = () => {
+    setFormState({ name: '', email: '', message: '' });
+    setError('');
+    onClose();
+  };
+
+  const handleSubmit = () => {
+    const { email, message } = formState;
+
+    if (email === '') {
+      setError('email');
+      return;
+    }
+
+    // validate email
+    let validEmail = EmailValidator.validate(email);
+
+    if (!validEmail) {
+      setError('notEmail');
+      console.log(validEmail);
+      return;
+    }
+    if (message === '') {
+      setError('message');
+      return;
+    }
+  };
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} initialFocusRef={initialRef}>
@@ -33,24 +74,52 @@ const Contact = ({ isOpen, onClose }) => {
         <ModalCloseButton />
         <ModalBody>
           <FormControl pb="6">
-            <FormLabel>Name</FormLabel>
-            <Input ref={initialRef} />
+            <FormLabel htmlFor="name">Name</FormLabel>
+            <Input
+              name="name"
+              type="text"
+              ref={initialRef}
+              onChange={handleChange}
+              value={formState.name}
+            />
           </FormControl>
-          <FormControl pb="6">
-            <FormLabel>Email *</FormLabel>
-            <Input />
+
+          <FormControl
+            isInvalid={error === 'email' || error === 'notEmail'}
+            pb="6"
+          >
+            <FormLabel htmlFor="email">Email *</FormLabel>
+            <Input
+              name="email"
+              type="email"
+              onChange={handleChange}
+              value={formState.email}
+            />
+            <FormErrorMessage>
+              {error === 'email' && 'Please enter your email'}
+              {error === 'notEmail' && 'Email is not valid'}
+            </FormErrorMessage>
           </FormControl>
-          <FormControl>
-            <FormLabel>Message *</FormLabel>
-            <Textarea resize="none" />
+
+          <FormControl isInvalid={error === 'message'}>
+            <FormLabel htmlFor="message">Message *</FormLabel>
+            <Textarea
+              name="message"
+              onChange={handleChange}
+              resize="none"
+              value={formState.message}
+            />
+            <FormErrorMessage>
+              Please enter a message or question
+            </FormErrorMessage>
           </FormControl>
         </ModalBody>
 
         <ModalFooter>
-          <Button colorScheme="purple" mr={3}>
+          <Button colorScheme="purple" mr={3} onClick={handleSubmit}>
             Submit
           </Button>
-          <Button onClick={onClose}>Cancel</Button>
+          <Button onClick={cancelHandler}>Cancel</Button>
         </ModalFooter>
       </ModalContent>
     </Modal>

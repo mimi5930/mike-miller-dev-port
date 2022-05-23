@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from '../../components/Projects';
-import { Center, Flex, Heading, useDisclosure } from '@chakra-ui/react';
+import { Center, Flex, Heading } from '@chakra-ui/react';
 import projects from './featProjects.json';
 
 const Portfolio = () => {

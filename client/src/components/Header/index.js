@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Flex, Button, Link, Image } from '@chakra-ui/react';
+import Contact from '../../Contact';
+import { Flex, Button, Link, Image, useDisclosure } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
-const Header = props => {
+const Header = () => {
   const navigate = useNavigate();
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [activeNav, setActiveNav] = useState(null);
 
@@ -66,11 +69,13 @@ const Header = props => {
             variant="outline"
             colorScheme={activeNav === 'contact' ? 'purple' : 'white'}
             id="contact"
+            onClick={onOpen}
           >
             Contact
           </Button>
         </Flex>
       </Flex>
+      <Contact isOpen={isOpen} onClose={onClose} />
     </header>
   );
 };

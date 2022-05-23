@@ -1,0 +1,4 @@
+.project-box:hover {
+  opacity: 75%;
+  transition: 300ms;
+}

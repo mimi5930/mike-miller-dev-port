@@ -15,7 +15,6 @@ const Project = ({ project }) => {
 
   return (
     <Box
-      key={project.name}
       width="300px"
       overflow="hidden"
       borderRadius="md"
@@ -24,6 +23,7 @@ const Project = ({ project }) => {
       onMouseEnter={onToggle}
       onMouseLeave={onToggle}
       m="2"
+      className="project-box"
     >
       <Image
         src={require(`../../img/projects/${project.pic}`)}

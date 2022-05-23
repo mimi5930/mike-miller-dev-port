@@ -11,7 +11,7 @@
 		"name": "Travel Bug",
 		"pic": "travel-bug.png",
 		"alt": "Travel Bug's homepage",
-		"features": "mySql, Handlebars, Express",
+		"features": "MySql, Handlebars, Express",
 		"url": "https://travelbug-project.herokuapp.com/",
 		"gitHub": "https://github.com/Metelak/Travel-bug"
 	},

@@ -1,4 +1,3 @@
-// TODO move portfolio page items here, and leave the projects in components
 import React from 'react';
 import Project from '../../components/Projects';
 import { Center, Flex, Heading, useDisclosure } from '@chakra-ui/react';

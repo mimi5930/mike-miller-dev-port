@@ -44,6 +44,7 @@ const Contact = ({ isOpen, onClose }) => {
 
   const cancelHandler = () => {
     setFormState({ name: '', email: '', message: '' });
+    setSubmit(null);
     setError('');
     onClose();
   };
@@ -80,6 +81,32 @@ const Contact = ({ isOpen, onClose }) => {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
+            email: email,
+            text: message
+          })
+        });
+        // if successful
+        setSubmit('success');
+      } catch (error) {
+        setSubmit('error');
+        console.log(error);
+        return;
+      }
+      setLoading(false);
+      return;
+    }
+
+    if (name) {
+      setLoading(true);
+      try {
+        await fetch('https://form-froggy.herokuapp.com/with-name', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
             email: email,
             text: message
           })

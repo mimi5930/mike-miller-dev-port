@@ -25,6 +25,8 @@ const Contact = ({ isOpen, onClose }) => {
     message: ''
   });
 
+  const [loadingState, setLoading] = useState(false);
+
   const [error, setError] = useState('');
 
   const handleChange = event => {
@@ -42,8 +44,8 @@ const Contact = ({ isOpen, onClose }) => {
     onClose();
   };
 
-  const handleSubmit = () => {
-    const { email, message } = formState;
+  const handleSubmit = async () => {
+    const { name, email, message } = formState;
 
     if (email === '') {
       setError('email');
@@ -61,6 +63,25 @@ const Contact = ({ isOpen, onClose }) => {
     if (message === '') {
       setError('message');
       return;
+    }
+
+    // fetch based on name input
+    // https://form-froggy.herokuapp.com/
+    if (name === '') {
+      setLoading(true);
+      const response = await fetch('http://localhost:3001/no-name', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          text: message
+        })
+      });
+      setLoading(false);
+      console.log(response);
     }
   };
 
@@ -116,7 +137,12 @@ const Contact = ({ isOpen, onClose }) => {
         </ModalBody>
 
         <ModalFooter>
-          <Button colorScheme="purple" mr={3} onClick={handleSubmit}>
+          <Button
+            colorScheme="purple"
+            mr={3}
+            onClick={handleSubmit}
+            isLoading={loadingState}
+          >
             Submit
           </Button>
           <Button onClick={cancelHandler}>Cancel</Button>

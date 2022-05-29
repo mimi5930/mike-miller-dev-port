@@ -18,6 +18,8 @@ const Portfolio = () => {
         bgColor="whiteAlpha.100"
         m="5"
         borderRadius="lg"
+        height="70%"
+        overflowY="scroll"
       >
         {projects.map(project => {
           return <Project key={project.name} project={project} />;

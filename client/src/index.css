@@ -11,6 +11,28 @@ body {
   background-color: black;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.projects {
+  scrollbar-width: auto;
+  scrollbar-color: #1100ff #000000;
+}
+
+/* Chrome, Edge, and Safari */
+.projects::-webkit-scrollbar {
+  width: 14px;
+}
+
+.projects::-webkit-scrollbar-track {
+  opacity: 100%;
+}
+
+.projects::-webkit-scrollbar-thumb {
+  background-color: #1100ff;
+  border-radius: 10px;
+  border: 3px none #ffffff;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

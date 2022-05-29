@@ -20,6 +20,7 @@ const Portfolio = () => {
         borderRadius="lg"
         height="70%"
         overflowY="scroll"
+        className="projects"
       >
         {projects.map(project => {
           return <Project key={project.name} project={project} />;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Contact from '../../Contact';
+import Contact from '../Contact';
 import { Flex, Button, Link, Image, useDisclosure } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 

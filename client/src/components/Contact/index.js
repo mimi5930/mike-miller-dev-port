@@ -12,7 +12,9 @@ import {
   FormLabel,
   Input,
   Textarea,
-  FormErrorMessage
+  FormErrorMessage,
+  Alert,
+  AlertIcon
 } from '@chakra-ui/react';
 import * as EmailValidator from 'email-validator';
 
@@ -28,6 +30,8 @@ const Contact = ({ isOpen, onClose }) => {
   const [loadingState, setLoading] = useState(false);
 
   const [error, setError] = useState('');
+
+  const [submitStatus, setSubmit] = useState(null);
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -66,22 +70,29 @@ const Contact = ({ isOpen, onClose }) => {
     }
 
     // fetch based on name input
-    // https://form-froggy.herokuapp.com/
     if (name === '') {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/no-name', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          email: email,
-          text: message
-        })
-      });
+      try {
+        await fetch('https://form-froggy.herokuapp.com/no-name', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            text: message
+          })
+        });
+        // if successful
+        setSubmit('success');
+      } catch (error) {
+        setSubmit('error');
+        console.log(error);
+        return;
+      }
       setLoading(false);
-      console.log(response);
+      return;
     }
   };
 
@@ -134,6 +145,18 @@ const Contact = ({ isOpen, onClose }) => {
               Please enter a message or question
             </FormErrorMessage>
           </FormControl>
+          {submitStatus === 'success' && (
+            <Alert status="success">
+              <AlertIcon />
+              Message sent!
+            </Alert>
+          )}
+          {submitStatus === 'error' && (
+            <Alert status="error">
+              <AlertIcon />
+              Message could not be sent. Please email mikej.miller440@gmail.com
+            </Alert>
+          )}
         </ModalBody>
 
         <ModalFooter>

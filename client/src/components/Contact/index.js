@@ -70,58 +70,30 @@ const Contact = ({ isOpen, onClose }) => {
       return;
     }
 
-    // fetch based on name input
-    if (name === '') {
-      setLoading(true);
-      try {
-        await fetch('https://form-froggy.herokuapp.com/no-name', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            email: email,
-            text: message
-          })
-        });
-        // if successful
-        setSubmit('success');
-      } catch (error) {
-        setSubmit('error');
-        console.log(error);
-        return;
-      }
-      setLoading(false);
+    // send submission to form-froggy
+    setLoading(true);
+    try {
+      await fetch('https://form-froggy.herokuapp.com/dev-port', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          text: message
+        })
+      });
+      // if successful
+      setSubmit('success');
+    } catch (error) {
+      setSubmit('error');
+      console.log(error);
       return;
     }
-
-    if (name) {
-      setLoading(true);
-      try {
-        await fetch('https://form-froggy.herokuapp.com/with-name', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            text: message
-          })
-        });
-        // if successful
-        setSubmit('success');
-      } catch (error) {
-        setSubmit('error');
-        setLoading(false);
-        console.log(error);
-        return;
-      }
-      setLoading(false);
-      return;
-    }
+    setLoading(false);
+    return;
   };
 
   return (

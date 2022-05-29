@@ -42,13 +42,26 @@ const Project = ({ project }) => {
           top="35%"
           left="50%"
           ml="-107.845px"
-          colorScheme="blackAlpha"
         >
           <a href={project.url} target="_blank" rel="noreferrer">
-            <Button leftIcon={<FiGlobe />}>Website</Button>
+            <Button
+              bg="black"
+              color="white"
+              _hover={{ bg: 'blackAlpha.800' }}
+              leftIcon={<FiGlobe />}
+            >
+              Website
+            </Button>
           </a>
           <a href={project.gitHub} target="_blank" rel="noreferrer">
-            <Button leftIcon={<FiGithub />}>Repo</Button>
+            <Button
+              bg="black"
+              color="white"
+              _hover={{ bg: 'blackAlpha.800' }}
+              leftIcon={<FiGithub />}
+            >
+              Repo
+            </Button>
           </a>
         </ButtonGroup>
       </Fade>

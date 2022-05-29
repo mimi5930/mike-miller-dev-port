@@ -100,9 +100,7 @@ const Contact = ({ isOpen, onClose }) => {
     <Modal isOpen={isOpen} onClose={onClose} initialFocusRef={initialRef}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>
-          Thank you for visiting! Please leave a message with any questions.
-        </ModalHeader>
+        <ModalHeader>Leave a Message</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <FormControl pb="6">

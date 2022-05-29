@@ -115,6 +115,7 @@ const Contact = ({ isOpen, onClose }) => {
         setSubmit('success');
       } catch (error) {
         setSubmit('error');
+        setLoading(false);
         console.log(error);
         return;
       }

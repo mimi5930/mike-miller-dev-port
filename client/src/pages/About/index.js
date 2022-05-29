@@ -7,16 +7,16 @@ const About = props => {
       <Flex
         mt="20vh"
         bgColor="blackAlpha.900"
-        width="50%"
+        width="80%"
         mr="auto"
         ml="auto"
-        height="50vh"
+        height="70vh"
         borderRadius="lg"
         justifyContent="space-evenly"
         flexDir="row"
       >
-        <Flex width="50%" flexDir="column" justifyContent="center">
-          <Heading size="2xl" color="whiteAlpha.800" margin="3" mb="5">
+        <Flex width="50%" flexDir="column" justifyContent="center" m="3">
+          <Heading size="2xl" color="whiteAlpha.800" mb="5">
             Mike Miller
           </Heading>
           <Image
@@ -24,6 +24,9 @@ const About = props => {
             alt="Mike's headshot"
             objectFit="cover"
             height="400px"
+            border="2px"
+            borderColor="blackAlpha.800"
+            borderRadius="2xl"
           />
         </Flex>
         <Text

@@ -16,8 +16,10 @@ const Project = ({ project }) => {
   return (
     <Box
       width="300px"
+      maxH="500px"
       overflow="hidden"
       borderRadius="md"
+      border="1px"
       bgColor="white"
       position="relative"
       onMouseEnter={onToggle}

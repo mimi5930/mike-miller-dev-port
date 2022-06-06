@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     <>
       <Center>
-        <Heading color="white" m="5" mt="8rem">
+        <Heading color="white" m="5" mt="9rem">
           Featured Work
         </Heading>
       </Center>

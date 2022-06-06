@@ -32,7 +32,9 @@ const Project = ({ project }) => {
         alt={project.alt}
       />
       <Box bgColor="white">
-        <Heading m="2">{project.name}</Heading>
+        <Heading fontSize="2xl" m="2">
+          {project.name}
+        </Heading>
         <Text m="2" mb="5">
           {project.features}
         </Text>

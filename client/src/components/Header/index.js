@@ -8,7 +8,7 @@ const Header = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const [activeNav, setActiveNav] = useState(null);
+  const [activeNav, setActiveNav] = useState('about');
 
   const navClickHandler = event => {
     let id = event.target.id;
@@ -36,8 +36,7 @@ const Header = () => {
           src={require('../../img/mike-logo.png')}
           alt="Website logo"
           onClick={() => {
-            document.title = 'Mike Miller';
-            setActiveNav(null);
+            setActiveNav('about');
             navigate('/');
           }}
         />
@@ -50,7 +49,7 @@ const Header = () => {
             id="about"
             mr="5"
             color={activeNav === 'about' && 'red.500'}
-            onClick={() => navigate('/about')}
+            onClick={() => navigate('/')}
           >
             About
           </Link>

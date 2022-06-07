@@ -1,58 +1,58 @@
 [
-	{
-		"name": "Ritual",
-		"pic": "ritual.png",
-		"features": "MERN, GraphQL, Chakra UI, React useContext",
-		"alt": "Ritual's homepage",
-		"url": "https://ritual-app-01.herokuapp.com/",
-		"gitHub": "https://github.com/Metelak/Ritual"
-	},
-	{
-		"name": "Travel Bug",
-		"pic": "travel-bug.png",
-		"alt": "Travel Bug's homepage",
-		"features": "MySql, Handlebars, Express",
-		"url": "https://travelbug-project.herokuapp.com/",
-		"gitHub": "https://github.com/Metelak/Travel-bug"
-	},
-	{
-		"name": "My Shopping List",
-		"pic": "my-shopping-list.png",
-		"alt": "My Shopping List's homepage",
-		"features": "Best Buy API, Bing Maps API, Materialize CSS",
-		"url": "https://mimi5930.github.io/my-shopping-list/",
-		"gitHub": "https://github.com/mimi5930/my-shopping-list"
-	},
-	{
-		"name": "Code Crazy",
-		"pic": "code-crazy.png",
-		"alt": "Code Crazy's homepage",
-		"features": "mySql, Handlebars, Express",
-		"url": "https://fathomless-dusk-37377.herokuapp.com/",
-		"gitHub": "https://github.com/mimi5930/code-crazy"
-	},
-	{
-		"name": "Coding Quiz",
-		"pic": "coding-quiz.png",
-		"alt": "Coding Quiz's homepage",
-		"features": "Javascript",
-		"url": "https://mimi5930.github.io/coding-quiz/",
-		"gitHub": "https://github.com/mimi5930/coding-quiz"
-	},
-	{
-		"name": "Mike Miller Violin",
-		"pic": "mike-violin.png",
-		"alt": "Mike Miller Violin's homepage",
-		"features": "HTML, CSS, JS",
-		"url": "https://www.mikemillerviolin.com/",
-		"gitHub": "https://github.com/mimi5930/mike-miller-violin"
-	},
-	{
-		"name": "Kids Visits",
-		"pic": "kids-visits.png",
-		"alt": "Kids Visit's homepage",
-		"features": "Working with a client to design their website",
-		"url": "https://mimi5930.github.io/kids-visits/",
-		"gitHub": "https://github.com/mimi5930/kids-visits"
-	}
+  {
+    "name": "Ritual",
+    "pic": "ritual.png",
+    "features": "MERN, GraphQL, Chakra UI, React useContext",
+    "alt": "Ritual's homepage",
+    "url": "https://ritual-app-01.herokuapp.com/",
+    "gitHub": "https://github.com/Metelak/Ritual"
+  },
+  {
+    "name": "Travel Bug",
+    "pic": "travel-bug.png",
+    "alt": "Travel Bug's homepage",
+    "features": "MySql, Handlebars, Express",
+    "url": "https://travelbug-project.herokuapp.com/",
+    "gitHub": "https://github.com/Metelak/Travel-bug"
+  },
+  {
+    "name": "My Shopping List",
+    "pic": "my-shopping-list.png",
+    "alt": "My Shopping List's homepage",
+    "features": "Best Buy API, Bing Maps API, Materialize CSS",
+    "url": "https://mimi5930.github.io/my-shopping-list/",
+    "gitHub": "https://github.com/mimi5930/my-shopping-list"
+  },
+  {
+    "name": "Code Crazy",
+    "pic": "code-crazy.png",
+    "alt": "Code Crazy's homepage",
+    "features": "mySql, Handlebars, Express",
+    "url": "https://fathomless-dusk-37377.herokuapp.com/",
+    "gitHub": "https://github.com/mimi5930/code-crazy"
+  },
+  {
+    "name": "Coding Quiz",
+    "pic": "coding-quiz.png",
+    "alt": "Coding Quiz's homepage",
+    "features": "Javascript",
+    "url": "https://mimi5930.github.io/coding-quiz/",
+    "gitHub": "https://github.com/mimi5930/coding-quiz"
+  },
+  {
+    "name": "Mike Miller Violin",
+    "pic": "mike-violin.png",
+    "alt": "Mike Miller Violin's homepage",
+    "features": "HTML, CSS, JS",
+    "url": "https://www.mikemillerviolin.com/",
+    "gitHub": "https://github.com/mimi5930/mike-miller-violin"
+  },
+  {
+    "name": "Kids Visits",
+    "pic": "kids-visits.png",
+    "alt": "Kids Visit's homepage",
+    "features": "Working with a client to design their website",
+    "url": "https://mimi5930.github.io/kids-visits/",
+    "gitHub": "https://github.com/mimi5930/kids-visits"
+  }
 ]

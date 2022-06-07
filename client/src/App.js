@@ -23,8 +23,7 @@ function App() {
       >
         <Header />
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="about" element={<About />} />
+          <Route path="/" element={<About />} />
           <Route path="portfolio" element={<Portfolio />} />
         </Routes>
         <Socials />

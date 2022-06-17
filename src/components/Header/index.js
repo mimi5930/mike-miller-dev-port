@@ -61,7 +61,13 @@ const Header = () => {
           >
             Portfolio
           </Link>
-          <Link id="resume" mr="5" color={activeNav === 'resume' && 'blue.500'}>
+          <Link
+            id="resume"
+            mr="5"
+            color={activeNav === 'resume' && 'blue.500'}
+            href={require('../../files/Michael Miller Software Engineer Resume 2022.pdf')}
+            download
+          >
             Resume
           </Link>
           <Button

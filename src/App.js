@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -22,8 +22,11 @@ function App() {
       >
         <Header />
         <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="/mike-miller-dev-port/" element={<About />} />
+          <Route
+            path="mike-miller-dev-port/portfolio"
+            element={<Portfolio />}
+          />
         </Routes>
         <Socials />
       </Box>

@@ -37,7 +37,7 @@ const Header = () => {
           alt="Website logo"
           onClick={() => {
             setActiveNav('about');
-            navigate('/');
+            navigate('/mike-miller-dev-port');
           }}
         />
         <Flex
@@ -49,7 +49,7 @@ const Header = () => {
             id="about"
             mr="5"
             color={activeNav === 'about' && 'red.500'}
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/mike-miller-dev-port/')}
           >
             About
           </Link>
@@ -57,7 +57,7 @@ const Header = () => {
             id="portfolio"
             mr="5"
             color={activeNav === 'portfolio' && 'green.500'}
-            onClick={() => navigate('/portfolio')}
+            onClick={() => navigate('/mike-miller-dev-port/portfolio')}
           >
             Portfolio
           </Link>

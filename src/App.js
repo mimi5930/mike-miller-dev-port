@@ -22,11 +22,8 @@ function App() {
       >
         <Header />
         <Routes>
-          <Route path="/mike-miller-dev-port/" element={<About />} />
-          <Route
-            path="mike-miller-dev-port/portfolio"
-            element={<Portfolio />}
-          />
+          <Route path="/" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
         <Socials />
       </Box>

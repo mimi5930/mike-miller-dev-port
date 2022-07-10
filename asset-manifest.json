@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mike-miller-dev-port/static/css/main.e4291f01.css",
-    "main.js": "/mike-miller-dev-port/static/js/main.5c587e4f.js",
+    "main.js": "/mike-miller-dev-port/static/js/main.f530c635.js",
     "static/js/787.eb5a6c3a.chunk.js": "/mike-miller-dev-port/static/js/787.eb5a6c3a.chunk.js",
     "static/media/mike.jpg": "/mike-miller-dev-port/static/media/mike.e2e018db4a2f61a51533.jpg",
     "static/media/home-background.jpg": "/mike-miller-dev-port/static/media/home-background.106b6f4b5856bf738afd.jpg",
@@ -22,11 +22,11 @@
     "static/media/press-start-2p-greek-400-normal.woff2": "/mike-miller-dev-port/static/media/press-start-2p-greek-400-normal.cf2420b5a5026b29ba84.woff2",
     "index.html": "/mike-miller-dev-port/index.html",
     "main.e4291f01.css.map": "/mike-miller-dev-port/static/css/main.e4291f01.css.map",
-    "main.5c587e4f.js.map": "/mike-miller-dev-port/static/js/main.5c587e4f.js.map",
+    "main.f530c635.js.map": "/mike-miller-dev-port/static/js/main.f530c635.js.map",
     "787.eb5a6c3a.chunk.js.map": "/mike-miller-dev-port/static/js/787.eb5a6c3a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e4291f01.css",
-    "static/js/main.5c587e4f.js"
+    "static/js/main.f530c635.js"
   ]
 }

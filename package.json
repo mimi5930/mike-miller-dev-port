@@ -2,7 +2,7 @@
   "name": "mike-dev-port",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://mimi5930.github.io/",
+  "homepage": "https://mimi5930.github.io/mike-miller-dev-port",
   "dependencies": {
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.9.0",

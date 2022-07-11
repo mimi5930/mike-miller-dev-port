@@ -4,7 +4,6 @@ import './App.css';
 
 import Header from './components/Header';
 import Socials from './components/Socials';
-import Homepage from './pages/Homepage';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 

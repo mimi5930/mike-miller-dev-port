@@ -6,6 +6,12 @@
   --box-color: #9db4c0;
 }
 
+.app {
+  min-height: 100vh;
+  background: var(--main-bg-color);
+  z-index: 0;
+}
+
 .project-box:hover {
   opacity: 75%;
   transition: 300ms;

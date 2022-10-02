@@ -6,14 +6,16 @@ import './App.css';
 // import Socials from './components/Socials';
 // import About from './pages/About';
 // import Portfolio from './pages/Portfolio';
-import Main from './pages/Main/main';
+import Navbar from './components/Navbar/Navbar';
 
 import { Box } from '@chakra-ui/react';
 
 function App() {
   return (
     <Router>
-      <Main></Main>
+      <div className="app">
+        <Navbar></Navbar>
+      </div>
       {/* <Box
         position="absolute"
         bgImage={require('./img/home-background.jpg')}

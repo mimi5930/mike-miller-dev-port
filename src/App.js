@@ -6,13 +6,15 @@ import Header from './components/Header';
 import Socials from './components/Socials';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
+import Main from './pages/Main/main';
 
 import { Box } from '@chakra-ui/react';
 
 function App() {
   return (
     <Router>
-      <Box
+      <Main></Main>
+      {/* <Box
         position="absolute"
         bgImage={require('./img/home-background.jpg')}
         bgSize="cover"
@@ -26,7 +28,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
         <Socials />
-      </Box>
+      </Box> */}
     </Router>
   );
 }

@@ -1,0 +1,33 @@
+.nav-container {
+  position: sticky;
+  background: var(--header-bg-color);
+  height: 110px;
+  color: var(--title-color);
+  transition: all 1s ease-in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.title-container > h1 {
+  font-size: xx-large;
+}
+
+.title-container > h2 {
+  font-size: x-large;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+li {
+  list-style: none;
+}

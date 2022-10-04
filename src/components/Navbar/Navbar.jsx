@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './navbar.css';
 
 // TODO: Add scroll hook to change navbar opacity

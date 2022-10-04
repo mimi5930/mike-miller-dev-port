@@ -1,5 +1,5 @@
 export function calculateNavOpacity(scrollY) {
-  let opacityValue = 100;
-
-  return opacityValue;
+  if (scrollY) {
+    return 0;
+  } else return 100;
 }

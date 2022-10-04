@@ -6,8 +6,9 @@
   --box-color: #9db4c0;
 }
 
+/* TODO: Change height back, currently used for testing */
 .app {
-  min-height: 100vh;
+  min-height: 120vh;
   background: var(--main-bg-color);
   z-index: 0;
 }

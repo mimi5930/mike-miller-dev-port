@@ -1,33 +1,42 @@
 .nav-container {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: var(--header-bg-color);
   height: 110px;
   color: var(--title-color);
-  transition: all 1s ease-in;
+  /* transition: all 1s ease-in; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
 }
 
 .title-container {
   text-align: center;
+  margin-left: 15px;
 }
 
 .title-container > h1 {
   font-size: xx-large;
+  margin: 0;
 }
 
 .title-container > h2 {
   font-size: x-large;
+  margin: 0;
 }
 
 ul {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  margin-right: 15px;
 }
 
 li {
   list-style: none;
+}
+
+ul.scrolled {
+  background-color: red;
 }

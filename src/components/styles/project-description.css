@@ -1,0 +1,16 @@
+.project-desc-card {
+  background-color: var(--box-color);
+  text-align: center;
+  min-height: 40vh;
+  width: 300px;
+  border: 3px solid var(--header-bg-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+.description {
+  border-top: 3px solid black;
+  padding: 20px 0px;
+  text-align: left;
+}

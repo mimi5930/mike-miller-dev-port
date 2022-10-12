@@ -1,4 +1,4 @@
-import './styles/project-description.css';
+import './styles/projects.css';
 
 export default function ProjectDescription() {
   const title = 'Title';
@@ -7,7 +7,7 @@ export default function ProjectDescription() {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fuga accusamus incidunt ab, cupiditate labore temporibus officiis optio esse quas. Quis doloribus harum tempore excepturi id quae, possimus dicta iusto.';
 
   return (
-    <div className="project-desc-card">
+    <div className="project-card">
       <h2>{title}</h2>
       <div>
         <h2>Languages:</h2>

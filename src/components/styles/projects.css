@@ -1,7 +1,7 @@
-.project-desc-card {
+.project-card {
   background-color: var(--box-color);
   text-align: center;
-  min-height: 40vh;
+  height: 50vh;
   width: 300px;
   border: 3px solid var(--header-bg-color);
   border-radius: 10px;
@@ -10,7 +10,7 @@
 }
 
 .description {
-  border-top: 3px solid black;
+  border-top: 3px solid var(--header-bg-color);
   padding: 20px 0px;
   text-align: left;
 }

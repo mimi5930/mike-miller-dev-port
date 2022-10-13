@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './navbar.css';
 
 // TODO: Navigation Links Scroll to different sections
-// TODO: Fix
+// TODO: Fix navbar appearing when page reloads
 
 export default function Navbar() {
   function onScroll() {

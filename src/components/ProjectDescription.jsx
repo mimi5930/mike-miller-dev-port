@@ -1,11 +1,6 @@
 import './styles/project-description.css';
 
-export default function ProjectDescription() {
-  const title = 'Title';
-  const languages = 'HTML, JAVASCRIPT';
-  const description =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fuga accusamus incidunt ab, cupiditate labore temporibus officiis optio esse quas. Quis doloribus harum tempore excepturi id quae, possimus dicta iusto.';
-
+export default function ProjectDescription({ title, languages, description }) {
   return (
     <div className="project-info-card">
       <div className="project-title-container">
@@ -22,3 +17,5 @@ export default function ProjectDescription() {
     </div>
   );
 }
+
+// TODO: Add function that replaces language text with icons

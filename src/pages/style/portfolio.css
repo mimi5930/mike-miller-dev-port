@@ -1,0 +1,51 @@
+.project-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card {
+  height: 50vh;
+  width: 50vw;
+  border: 3px solid var(--header-bg-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-image: url('https://dummyimage.com/300');
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  padding: 20px 40px;
+  transition: all ease-in 0.3s;
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+  opacity: 0.85;
+}
+
+.project-navigation:hover {
+  opacity: 1;
+}
+
+.icon {
+  margin-bottom: -2.7px;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+}

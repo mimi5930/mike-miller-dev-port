@@ -1,15 +1,25 @@
-.project-card {
+.project-info-card {
   background-color: var(--box-color);
   text-align: center;
-  height: 50vh;
-  width: 18vw;
+  height: 20vh;
+  width: 25vw;
   border: 3px solid var(--header-bg-color);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
 }
 
-.description {
+.project-title-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.language-container {
+  display: flex;
+}
+
+.language-container .description {
   border-top: 3px solid var(--header-bg-color);
   padding: 20px 0px;
   text-align: left;

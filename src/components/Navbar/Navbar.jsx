@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './navbar.css';
 
 // TODO: Navigation Links Scroll to different sections
+// TODO: Fix
 
 export default function Navbar() {
   function onScroll() {

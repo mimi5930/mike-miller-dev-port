@@ -1,12 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Sriracha&display=swap');
+
 :root {
   --main-bg-color: #5c6b73;
   --header-bg-color: #253237;
   --title-color: #c2dfe3;
   --text-color: #e0fbfc;
   --box-color: #9db4c0;
+
+  /* Fonts */
+  --heading-font: 'Sriracha', cursive;
+  --text-font: 'Baloo 2', cursive;
 }
 
 /* TODO: Change height back, currently used for testing */
+
+/* General Font Styling */
+
+h1 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
+h2 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
+li {
+  font-family: var(--text-font);
+}
+
+p {
+  font-family: var(--text-font);
+  font-weight: 500;
+}
+
+/* ================ */
+
 .app {
   min-height: 120vh;
   background: var(--main-bg-color);

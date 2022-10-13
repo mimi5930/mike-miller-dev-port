@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.portfolio-page-title {
+  font-size: 4em;
+}
+
 .project-card {
   height: 50vh;
   width: 50vw;
@@ -13,6 +17,7 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;

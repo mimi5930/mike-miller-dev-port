@@ -5,8 +5,7 @@ import { FiGithub, FiGlobe } from 'react-icons/fi';
 export default function Portfolio() {
   return (
     <div className="project-container">
-      <h1>Featured Projects</h1>
-      <ProjectDescription></ProjectDescription>
+      <h1 className="portfolio-page-title">Featured Projects</h1>
       <div className="project-card">
         <div className="project-navigation">
           <button>{'<'}</button>
@@ -20,6 +19,7 @@ export default function Portfolio() {
           </div>
           <button>{'>'}</button>
         </div>
+        <ProjectDescription />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './navbar.css';
+import './styles/navbar.css';
 
 // TODO: Navigation Links Scroll to different sections
 // TODO: Fix navbar appearing when page reloads

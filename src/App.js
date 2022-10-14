@@ -6,7 +6,7 @@ import './App.css';
 // import Socials from './components/Socials';
 // import About from './pages/About';
 // import Portfolio from './pages/Portfolio';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar';
 import Portfolio from './pages/Portfolio';
 
 import { Box } from '@chakra-ui/react';

@@ -20,7 +20,7 @@ export default function Portfolio() {
       <div
         className="project-card"
         style={{
-          backgroundImage: require(`../img/projects/${testProject.pic}`)
+          backgroundImage: `url(${require(`../img/projects/${testProject.pic}`)})`
         }}
       >
         <ProjectNavigation url={testProject.url} gitHub={testProject.gitHub} />

@@ -28,29 +28,3 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* .project-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 50%;
-  padding: 20px 40px;
-  transition: all ease-in 0.3s;
-  background-color: var(--main-bg-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
-  opacity: 0.85;
-}
-
-.project-navigation:hover {
-  opacity: 1;
-}
-
-.links {
-  display: flex;
-  gap: 10px;
-}
-
-.icon {
-  margin-bottom: -2.7px;
-} */

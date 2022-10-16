@@ -19,3 +19,5 @@ export default function ProjectDescription({ title, languages, description }) {
 }
 
 // TODO: Add function that replaces language text with icons
+// TODO: Fix language line height
+// TODO: Resize and reorder text

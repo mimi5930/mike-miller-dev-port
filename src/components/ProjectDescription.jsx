@@ -5,10 +5,10 @@ export default function ProjectDescription({ title, languages, description }) {
     <div className="project-info-card">
       <div className="project-title-container">
         <h2>{title}</h2>
-        <div className="language-container">
-          <h2>Languages:</h2>
-          <p>{languages}</p>
-        </div>
+      </div>
+      <div className="language-container">
+        <h2>Languages:</h2>
+        <p className="languages">{languages}</p>
       </div>
       <div>
         <h2>Description:</h2>

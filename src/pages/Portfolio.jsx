@@ -19,12 +19,7 @@ const projects = [
   {
     title: 'Ritual',
     pic: 'ritual.png',
-    languages: [
-      <SiMongodb></SiMongodb>,
-      <SiGraphql></SiGraphql>,
-      <SiReact></SiReact>,
-      'Chakra UI'
-    ],
+    languages: [<SiMongodb />, <SiGraphql />, <SiReact />, 'Chakra UI'],
     description:
       'Ritual is a goal setting application centered on wellness, where we can add new goals, track daily goals, and monitor progress.',
     alt: "Ritual's homepage",

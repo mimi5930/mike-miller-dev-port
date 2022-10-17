@@ -25,10 +25,19 @@
 
 .language-container {
   display: flex;
+  align-items: center;
 }
 
 .language-container .description {
   border-top: 3px solid var(--header-bg-color);
   padding: 20px 0px;
   text-align: left;
+}
+
+.languages {
+  font-size: 0.9em;
+}
+
+.languages svg {
+  font-size: 30px;
 }

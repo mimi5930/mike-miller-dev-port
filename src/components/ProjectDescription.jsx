@@ -8,7 +8,18 @@ export default function ProjectDescription({ title, languages, description }) {
       </div>
       <div className="language-container">
         <h2>Languages:</h2>
-        <p className="languages">{languages}</p>
+        {languages.map(language => {
+          if (language.icon !== null) {
+            return (
+              <div className="language-icon-container" key={language.title}>
+                <div className="tooltip">{language.title}</div>
+                <p className="languages">{language.icon}</p>
+              </div>
+            );
+          } else {
+            return language.title;
+          }
+        })}
       </div>
       <div>
         <h2>Description:</h2>
@@ -18,6 +29,6 @@ export default function ProjectDescription({ title, languages, description }) {
   );
 }
 
-// TODO: Add function that replaces language text with icons
 // TODO: Fix language line height
 // TODO: Resize and reorder text
+// TODO: Add tooltip

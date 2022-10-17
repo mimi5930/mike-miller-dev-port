@@ -1,10 +1,28 @@
 import './styles/project-navigation.css';
 import { FiGithub, FiGlobe } from 'react-icons/fi';
 
-export default function ProjectNavigation({ url, gitHub }) {
+export default function ProjectNavigation({
+  url,
+  gitHub,
+  currentProject,
+  setCurrentProject,
+  projectsLength
+}) {
+  function prevProject() {
+    currentProject === 0
+      ? setCurrentProject(projectsLength - 1)
+      : setCurrentProject(currentProject - 1);
+  }
+
+  function nexProject() {
+    currentProject === projectsLength - 1
+      ? setCurrentProject(0)
+      : setCurrentProject(currentProject + 1);
+  }
+
   return (
     <div className="project-navigation">
-      <button>{'<'}</button>
+      <button onClick={prevProject}>{'<'}</button>
       <div className="links">
         <button>
           <a href={url}>
@@ -17,7 +35,7 @@ export default function ProjectNavigation({ url, gitHub }) {
           </a>
         </button>
       </div>
-      <button>{'>'}</button>
+      <button onClick={nexProject}>{'>'}</button>
     </div>
   );
 }

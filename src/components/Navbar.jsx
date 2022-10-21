@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <section className={`nav-container ${scroll && 'nav-container-scrolled'}`}>
       <div className="title-container">
-        <h1>Michael Miller</h1>
+        <h1>Mike Miller</h1>
         <h2>Web Developer</h2>
       </div>
       <ul>

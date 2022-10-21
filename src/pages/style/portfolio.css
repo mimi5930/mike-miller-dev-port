@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .portfolio-page-title {
@@ -27,4 +28,27 @@
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: move-left 0.2s ease-in, enter-right 0.2s 0.2s ease-out;
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0);
+    filter: blur(10px) grayscale(100%);
+  }
+  100% {
+    transform: translateX(-1500px);
+    filter: blur(0) grayscale(100%);
+  }
+}
+
+@keyframes enter-right {
+  0% {
+    transform: translateX(1500px);
+    filter: blur(10px);
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+  }
 }

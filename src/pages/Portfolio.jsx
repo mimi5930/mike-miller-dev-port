@@ -97,7 +97,7 @@ const projects = [
       { title: 'Javascript', icon: <SiJavascript /> }
     ],
     description:
-      "Brenda Jacobson's website to provide her students and parents with recourses for children.",
+      "Brenda Jacobson's website to provide parents with recourses for children.",
     url: 'https://mimi5930.github.io/kids-visits/',
     gitHub: 'https://github.com/mimi5930/kids-visits'
   }
@@ -115,6 +115,7 @@ export default function Portfolio() {
         style={{
           backgroundImage: `url(${require(`../img/projects/${projects[currentProject].pic}`)})`
         }}
+        key={Math.random()}
       >
         <ProjectNavigation
           projectsLength={projects.length}

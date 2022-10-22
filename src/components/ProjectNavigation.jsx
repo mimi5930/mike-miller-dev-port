@@ -6,15 +6,18 @@ export default function ProjectNavigation({
   gitHub,
   currentProject,
   setCurrentProject,
-  projectsLength
+  projectsLength,
+  setAnimation
 }) {
   function prevProject() {
+    setAnimation('prev-project');
     currentProject === 0
       ? setCurrentProject(projectsLength - 1)
       : setCurrentProject(currentProject - 1);
   }
 
   function nexProject() {
+    setAnimation('next-project');
     currentProject === projectsLength - 1
       ? setCurrentProject(0)
       : setCurrentProject(currentProject + 1);

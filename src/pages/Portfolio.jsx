@@ -106,12 +106,13 @@ const projects = [
 export default function Portfolio() {
   // sets index for current project
   const [currentProject, setCurrentProject] = useState(0);
+  const [animation, setAnimation] = useState('');
 
   return (
     <div className="project-container">
       <h1 className="portfolio-page-title">Featured Projects</h1>
       <div
-        className="project-card"
+        className={`project-card ${animation}`}
         style={{
           backgroundImage: `url(${require(`../img/projects/${projects[currentProject].pic}`)})`
         }}
@@ -123,6 +124,7 @@ export default function Portfolio() {
           setCurrentProject={setCurrentProject}
           url={projects[currentProject].url}
           gitHub={projects[currentProject].gitHub}
+          setAnimation={setAnimation}
         />
         <ProjectDescription
           title={projects[currentProject].title}

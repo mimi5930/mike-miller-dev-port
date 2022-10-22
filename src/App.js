@@ -10,12 +10,14 @@ import Navbar from './components/Navbar';
 import Portfolio from './pages/Portfolio';
 
 import { Box } from '@chakra-ui/react';
+import About from './pages/About';
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Navbar></Navbar>
+        <About></About>
         <Portfolio></Portfolio>
       </div>
       {/* <Box

@@ -12,7 +12,7 @@
 }
 
 .project-card {
-  height: 50vh;
+  height: 60vh;
   width: 50vw;
   border: 3px solid var(--header-bg-color);
   border-radius: 10px;
@@ -21,7 +21,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   background-image: url('https://dummyimage.com/300');
   background-position-x: center;
@@ -32,11 +32,11 @@
 }
 
 .next-project {
-  animation: move-left 0.2s ease-in, enter-right 0.2s 0.2s ease-out;
+  animation: move-left 0.2s, enter-right 0.3s 0.2s ease-out;
 }
 
 .prev-project {
-  animation: move-right 0.2s ease-in, enter-left 0.2s 0.2s ease-out;
+  animation: move-right 0.2s, enter-left 0.3s 0.2s ease-out;
 }
 
 @keyframes initial-enter {

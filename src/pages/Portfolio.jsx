@@ -109,7 +109,7 @@ export default function Portfolio() {
   const [animation, setAnimation] = useState('');
 
   return (
-    <div className="project-container">
+    <div className="project-container" id="projects">
       <h1 className="portfolio-page-title">Featured Projects</h1>
       <div
         className={`project-card ${animation}`}

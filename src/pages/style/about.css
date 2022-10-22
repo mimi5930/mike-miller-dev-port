@@ -1,0 +1,30 @@
+.about-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.about-card {
+  display: flex;
+  justify-content: center;
+  width: 60vw;
+  gap: 20px;
+}
+
+.about-title-container {
+  background-color: var(--box-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+  padding: 20px;
+  height: 30vh;
+  min-width: 25vw;
+}
+
+.about-image {
+  margin-top: 100px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}

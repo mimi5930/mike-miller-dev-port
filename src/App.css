@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Sriracha&display=swap');
 
 :root {
-  --main-bg-color: #5c6b73;
-  --header-bg-color: #253237;
+  --main-bg-color: #ffffff;
+  --header-bg-color: #5f0f40;
   --title-color: #c2dfe3;
   --text-color: #e0fbfc;
-  --box-color: #9db4c0;
+  --box-color: #eae2b7;
+  --button-color: #9a031e;
+  --button-color-active: #ffd60a;
 
   /* Fonts */
   --heading-font: 'Sriracha', cursive;
   --text-font: 'Baloo 2', cursive;
 }
 
-/* TODO: Change height back, currently used for testing */
+html {
+  scroll-behavior: smooth;
+}
 
 /* General Font Styling */
 
@@ -52,22 +56,23 @@ p {
 
 button {
   cursor: pointer;
-  background-color: var(--header-bg-color);
+  background-color: var(--button-color);
   border: 1px solid transparent;
   border-radius: 0.75rem;
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 1.125rem;
   font-weight: 600;
   padding: 0.75rem 1.2rem;
   text-align: center;
   transition: ease-in 0.2s;
+  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
 }
 
 button:hover {
-  background-color: #374151;
+  background-color: var(--button-color-active);
 }
 
 button:focus {
-  outline: 2px solid #374151;
+  outline: 2px solid var(--button-color-active);
   outline-offset: -1px;
 }

@@ -22,11 +22,14 @@ export default function Navbar() {
     <section className={`nav-container ${scroll && 'nav-container-scrolled'}`}>
       <div className="title-container">
         <h1>Mike Miller</h1>
-        <h2>Web Developer</h2>
       </div>
       <ul>
-        <li>About</li>
-        <li>Projects</li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
         <li>Resume</li>
         <li>Contact</li>
       </ul>

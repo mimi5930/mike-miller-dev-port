@@ -98,7 +98,7 @@ const projects = [
     ],
     description:
       "Brenda Jacobson's website to provide parents with recourses for children.",
-    url: 'https://mimi5930.github.io/kids-visits/',
+    url: 'https://kidsvisits.com',
     gitHub: 'https://github.com/mimi5930/kids-visits'
   }
 ];

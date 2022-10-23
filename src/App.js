@@ -11,6 +11,7 @@ import Portfolio from './pages/Portfolio';
 
 import { Box } from '@chakra-ui/react';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Navbar></Navbar>
         <About></About>
         <Portfolio></Portfolio>
+        <Contact></Contact>
       </div>
       {/* <Box
         position="absolute"

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './styles/navbar.css';
 
-// TODO: Navigation Links Scroll to different sections
 // TODO: Fix navbar appearing when page reloads
 
 export default function Navbar() {
@@ -12,6 +11,7 @@ export default function Navbar() {
   const [scroll, setScroll] = useState(window.scrollY ? true : false);
 
   useEffect(() => {
+    if (window.scrollY) onScroll();
     window.addEventListener('scroll', onScroll);
     return () => {
       window.removeEventListener('scroll', onScroll);
@@ -31,7 +31,9 @@ export default function Navbar() {
           <a href="#projects">Projects</a>
         </li>
         <li>Resume</li>
-        <li>Contact</li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </section>
   );

@@ -14,7 +14,6 @@
 .project-card {
   height: 60vh;
   width: 50vw;
-  border: 3px solid var(--header-bg-color);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
@@ -23,7 +22,6 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-image: url('https://dummyimage.com/300');
   background-position-x: center;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -51,7 +49,7 @@
 @keyframes move-left {
   0% {
     transform: translateX(0);
-    filter: blur(10px) grayscale(100%);
+    filter: blur(20px) grayscale(100%);
   }
   100% {
     transform: translateX(-1500px);
@@ -62,7 +60,7 @@
 @keyframes enter-right {
   0% {
     transform: translateX(1500px);
-    filter: blur(10px);
+    filter: blur(20px);
   }
   100% {
     transform: translateX(0);

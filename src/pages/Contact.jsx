@@ -22,7 +22,6 @@ export default function Contact() {
     message: null
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [submissionStatus, setSubmissionStatus] = useState(null);
   const [toast, setToast] = useState({});
 
   function determineIcon(initialIcon, field) {
@@ -68,42 +67,46 @@ export default function Contact() {
 
     setInputError(inputError);
 
-    // set Toast
-    setToast({
-      success: true,
-      message: 'test message'
-    });
-
     // if no falsy values exist
     if (!inputError.name && !inputError.email && !inputError.message) {
-      // set loading spinner
+      // set loading spinner, disallows multiple presses
       setIsLoading(true);
 
       // submit data
-      // try {
-      //   const response = await fetch(
-      //     'https://formsubmit.co/ajax/mikej.miller440@gmail.com',
-      //     {
-      //       method: 'POST',
-      //       headers: {
-      //         'Content-Type': 'application/json',
-      //         Accept: 'application/json'
-      //       },
-      //       body: JSON.stringify(data)
-      //     }
-      //   );
-      //   if (response.ok) {
-      //     setIsLoading(false);
-      //     // reset form
-      //     setSubmissionStatus(true);
-      //     resetForm();
-      //   } else {
-      //     console.log('error!!! ', response);
-      //   }
-      // } catch (error) {
-      //   console.log('caught error', error);
-      //   setIsLoading(false);
-      // }
+      try {
+        const response = await fetch(
+          'https://formsubmit.co/ajax/mikej.miller440@gmail.com',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json'
+            },
+            body: JSON.stringify(data)
+          }
+        );
+        if (response.ok) {
+          setIsLoading(false);
+          // reset form
+          setToast({
+            success: true,
+            message: 'Thank you for your submission!'
+          });
+          resetForm();
+        } else {
+          setIsLoading(false);
+          setToast({
+            success: false,
+            message: response.statusText
+          });
+        }
+      } catch (error) {
+        setToast({
+          success: false,
+          message: 'There was an error! Please try again'
+        });
+        setIsLoading(false);
+      }
     }
   }
 

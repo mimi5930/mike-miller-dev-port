@@ -10,7 +10,7 @@
   /* screen width minus width minus padding */
   left: calc(50% - 150px - 4px);
   box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
-  animation: toast-pop-up 1s ease-out, toast-leave 1s 6s ease-in;
+  animation: toast-pop-up 1s ease-out, toast-leave 1s 6s ease-in forwards;
   bottom: 30px;
 }
 

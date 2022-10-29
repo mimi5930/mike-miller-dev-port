@@ -161,8 +161,8 @@ export default function Contact() {
         <button
           type="submit"
           disabled={isLoading}
-          className={`form-submit-button ${
-            isLoading && 'form-submit-button-loading'
+          className={`form-submit-button${
+            isLoading ? ' form-submit-button-loading' : ''
           }`}
         >
           {isLoading ? <FaSpinner className="loading-spinner" /> : 'Submit'}

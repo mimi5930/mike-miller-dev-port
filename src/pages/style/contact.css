@@ -9,10 +9,11 @@
 
 .contact-page-title {
   font-size: 4em;
+  text-align: center;
 }
 
 .contact-form {
-  height: 72vh;
+  min-height: 72vh;
   width: 70vw;
   background-color: var(--box-color);
   border-radius: 10px;
@@ -105,7 +106,8 @@
 
 .form-submit-button-loading {
   border-radius: 90px;
-  width: 60px;
+  max-width: 60px;
+  transition: all 0.5s ease-out;
 }
 
 .form-submit-button:disabled {
@@ -157,5 +159,20 @@ input:-webkit-autofill:active {
   }
   100% {
     scale: 2;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .form-input-container {
+    width: 80%;
+  }
+
+  .form-submit-button {
+    width: calc(80% + 40px);
+  }
+
+  .form-input-container input,
+  .form-input-container textarea {
+    margin-left: 25px;
   }
 }

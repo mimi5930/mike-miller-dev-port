@@ -18,7 +18,7 @@
   background-color: var(--box-color);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +28,7 @@
 
 .form-input-container {
   background-color: var(--header-bg-color);
-  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+  box-shadow: var(--box-shadow);
   padding: 20px;
   width: 600px;
   margin-bottom: 1em;

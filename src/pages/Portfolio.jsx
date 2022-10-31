@@ -52,11 +52,14 @@ const projects = [
     pic: 'my-shopping-list.png',
     alt: "My Shopping List's homepage",
     languages: [
-      { title: 'Materialize CSS', icon: <DiMaterializecss /> },
+      {
+        title: 'Materialize CSS',
+        icon: <DiMaterializecss />
+      },
       { title: 'Best Buy API, Bing Maps API', icon: null }
     ],
     description:
-      'My Shopping List helps enhance a users shopping experience by allowing them to find the cost of the items they need at the Best Buy nearest to their location',
+      'My Shopping List helps enhance a users shopping experience by allowing them to find the cost of the items they need at the Best Buy nearest to their location.',
     url: 'https://mimi5930.github.io/my-shopping-list/',
     gitHub: 'https://github.com/mimi5930/my-shopping-list'
   },
@@ -84,7 +87,7 @@ const projects = [
       { title: 'Javascript', icon: <SiJavascript /> }
     ],
     description:
-      'A website to showcase Mike Miller as a performer and educator. Provides links to listen and engage with Mr. Miller',
+      'A website to showcase Mike Miller as a performer and educator. Provides links to listen and engage with Mr. Miller.',
     url: 'https://www.mikemillerviolin.com/',
     gitHub: 'https://github.com/mimi5930/mike-miller-violin'
   },
@@ -115,11 +118,21 @@ export default function Portfolio() {
         <h1 className="portfolio-page-title">Featured Projects</h1>
         <div
           className={`project-card ${animation}`}
-          style={{
-            backgroundImage: `url(${require(`../img/projects/${projects[currentProject].pic}`)})`
-          }}
+          // style={{
+          //   backgroundImage: `url(${require(`../img/projects/${projects[currentProject].pic}`)})`
+          // }}
           key={Math.random()}
         >
+          <img
+            className="project-image"
+            src={require(`../img/projects/${projects[currentProject].pic}`)}
+            alt={projects[currentProject].alt}
+          />
+          <ProjectDescription
+            title={projects[currentProject].title}
+            languages={projects[currentProject].languages}
+            description={projects[currentProject].description}
+          />
           <ProjectNavigation
             projectsLength={projects.length}
             currentProject={currentProject}
@@ -127,11 +140,6 @@ export default function Portfolio() {
             url={projects[currentProject].url}
             gitHub={projects[currentProject].gitHub}
             setAnimation={setAnimation}
-          />
-          <ProjectDescription
-            title={projects[currentProject].title}
-            languages={projects[currentProject].languages}
-            description={projects[currentProject].description}
           />
         </div>
       </div>

@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+  box-shadow: var(--box-shadow);
 }
 
 .title-container {

@@ -23,7 +23,7 @@ export default function About() {
           ></img>
         </div>
       </div>
-      <Spacer></Spacer>
+      <Spacer />
     </>
   );
 }

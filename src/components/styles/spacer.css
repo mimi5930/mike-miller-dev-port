@@ -1,6 +1,7 @@
 .spacer {
-  width: 80vw;
+  width: 80%;
   height: 2px;
   border-style: none;
+  border-color: transparent;
   background-color: var(--header-bg-color);
 }

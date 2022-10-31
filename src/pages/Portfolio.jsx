@@ -15,6 +15,7 @@ import {
 } from 'react-icons/si';
 import { DiMaterializecss } from 'react-icons/di';
 import { useState } from 'react';
+import Spacer from '../components/Spacer';
 
 const projects = [
   {
@@ -109,29 +110,32 @@ export default function Portfolio() {
   const [animation, setAnimation] = useState('');
 
   return (
-    <div className="project-container" id="projects">
-      <h1 className="portfolio-page-title">Featured Projects</h1>
-      <div
-        className={`project-card ${animation}`}
-        style={{
-          backgroundImage: `url(${require(`../img/projects/${projects[currentProject].pic}`)})`
-        }}
-        key={Math.random()}
-      >
-        <ProjectNavigation
-          projectsLength={projects.length}
-          currentProject={currentProject}
-          setCurrentProject={setCurrentProject}
-          url={projects[currentProject].url}
-          gitHub={projects[currentProject].gitHub}
-          setAnimation={setAnimation}
-        />
-        <ProjectDescription
-          title={projects[currentProject].title}
-          languages={projects[currentProject].languages}
-          description={projects[currentProject].description}
-        />
+    <>
+      <div className="project-container" id="projects">
+        <h1 className="portfolio-page-title">Featured Projects</h1>
+        <div
+          className={`project-card ${animation}`}
+          style={{
+            backgroundImage: `url(${require(`../img/projects/${projects[currentProject].pic}`)})`
+          }}
+          key={Math.random()}
+        >
+          <ProjectNavigation
+            projectsLength={projects.length}
+            currentProject={currentProject}
+            setCurrentProject={setCurrentProject}
+            url={projects[currentProject].url}
+            gitHub={projects[currentProject].gitHub}
+            setAnimation={setAnimation}
+          />
+          <ProjectDescription
+            title={projects[currentProject].title}
+            languages={projects[currentProject].languages}
+            description={projects[currentProject].description}
+          />
+        </div>
       </div>
-    </div>
+      <Spacer />
+    </>
   );
 }

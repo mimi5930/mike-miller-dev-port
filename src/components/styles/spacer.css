@@ -1,0 +1,6 @@
+.spacer {
+  width: 80vw;
+  height: 2px;
+  border-style: none;
+  background-color: var(--header-bg-color);
+}

@@ -2,11 +2,11 @@
 
 :root {
   --main-bg-color: whitesmoke;
-  --header-bg-color: #5f0f40;
+  --header-bg-color: #264653;
   --title-color: #c2dfe3;
   --text-color: #e0fbfc;
   --box-color: white;
-  --button-color: #9a031e;
+  --button-color: #e76f51;
   --button-color-active: #ffd60a;
   --box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
 

@@ -11,7 +11,7 @@ import { useRef } from 'react';
 import { useState } from 'react';
 import Toast from '../components/Toast';
 
-export default function Contact() {
+export default function Contact({ contactRef }) {
   const nameInput = useRef();
   const emailInput = useRef();
   const messageInput = useRef();
@@ -111,7 +111,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact-container" id="contact">
+    <div className="contact-container" id="contact" ref={contactRef}>
       <form className="contact-form" onSubmit={handleFormSubmit}>
         <h1 className="contact-page-title">Contact Mike</h1>
         <div className="form-input-container">

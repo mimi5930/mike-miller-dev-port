@@ -38,6 +38,15 @@
   flex-direction: row;
   gap: 20px;
   margin-right: 20px;
+  transition: opacity 0.2s;
+}
+
+.nav-container-ul:hover > * {
+  opacity: 0.3;
+}
+
+.nav-container-ul li:hover {
+  opacity: 1;
 }
 
 .nav-container-li {
@@ -46,7 +55,7 @@
   position: relative;
 }
 
-.nav-container-li::after {
+.nav-container-li a::after {
   visibility: hidden;
   content: '';
   background-color: black;
@@ -60,6 +69,10 @@
 }
 
 .nav-container-li a:active::after {
+  visibility: visible;
+}
+
+.nav-container-li a:visited::after {
   visibility: visible;
 }
 

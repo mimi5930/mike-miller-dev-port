@@ -1,5 +1,5 @@
 .project-info-card {
-  border-top: solid black 2px;
+  border-top: solid var(--header-bg-color) 2px;
   background-color: var(--box-color);
   text-align: center;
   height: 42%;
@@ -8,6 +8,7 @@
 }
 
 .project-title-container {
+  height: 35%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -26,8 +27,7 @@
 
 .description {
   text-align: center;
-  padding: 20px;
-  /* margin-top: -15px; */
+  padding: 0 20px;
 }
 
 .language-list {
@@ -47,11 +47,12 @@
 
 .language-icon-container {
   position: relative;
-  bottom: 7px;
+  bottom: 18px;
 }
 
 .tech-title {
   margin-right: 4px;
+  font-size: 2em;
 }
 
 .language-text {

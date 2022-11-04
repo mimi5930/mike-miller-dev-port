@@ -107,22 +107,16 @@ const projects = [
   }
 ];
 
-export default function Portfolio() {
+export default function Portfolio({ portfolioRef }) {
   // sets index for current project
   const [currentProject, setCurrentProject] = useState(0);
   const [animation, setAnimation] = useState('');
 
   return (
     <>
-      <div className="project-container" id="projects">
+      <div className="project-container" id="projects" ref={portfolioRef}>
         <h1 className="portfolio-page-title">Featured Projects</h1>
-        <div
-          className={`project-card ${animation}`}
-          // style={{
-          //   backgroundImage: `url(${require(`../img/projects/${projects[currentProject].pic}`)})`
-          // }}
-          key={Math.random()}
-        >
+        <div className={`project-card ${animation}`} key={Math.random()}>
           <img
             className="project-image"
             src={require(`../img/projects/${projects[currentProject].pic}`)}

@@ -1,8 +1,6 @@
 import Spacer from '../components/Spacer';
 import './style/about.css';
 
-// TODO: Make this page mobile friendly
-
 export default function About() {
   return (
     <>

@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 }
 
 .about-card {
@@ -27,4 +26,37 @@
   max-width: 600px;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 1000px) {
+  .about-container {
+    min-height: 100vh;
+  }
+
+  .about-card {
+    width: 80vw;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .about-title-container {
+    height: 35vh;
+    padding-top: 6px;
+    text-align: center;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .about-image {
+    margin-top: 100px;
+    max-width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-title-container {
+    height: 45vh;
+  }
 }

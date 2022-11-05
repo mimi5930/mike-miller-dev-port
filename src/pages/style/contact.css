@@ -164,7 +164,7 @@ input:-webkit-autofill:active {
 
 /* MOBILE DISPLAY */
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px), screen and (max-height: 1120px) {
   .contact-container {
     min-height: 100vh;
   }

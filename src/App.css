@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Sriracha&display=swap');
 
 :root {
-  --main-bg-color: whitesmoke;
+  --main-bg-color-one: #cbf3f0;
+  --main-bg-color-two: #2ec4b6;
+  --main-bg-color-three: #ff9f1c;
   --header-bg-color: #264653;
-  --title-color: #c2dfe3;
+  --title-color: #cbf3f0;
   --text-color: #e0fbfc;
-  --box-color: white;
-  --button-color: #e76f51;
-  --button-color-active: #ffd60a;
+  --box-color: #e9f1f7;
+  --button-color: #42bfdd;
+  --button-color-active: #bbe6e4;
   --box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
-
+  --form-color: #264653;
   /* Fonts */
   --heading-font: 'Sriracha', cursive;
   --text-font: 'Baloo 2', cursive;
@@ -43,8 +45,13 @@ p {
 /* ================ */
 
 .app {
-  min-height: 100vh;
-  background: var(--main-bg-color);
+  min-height: 300vh;
+  background: var(--main-bg-one);
+  background-image: linear-gradient(
+    var(--main-bg-color-one),
+    var(--main-bg-color-two),
+    var(--main-bg-color-three)
+  );
   z-index: 0;
 }
 

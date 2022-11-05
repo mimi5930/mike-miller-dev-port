@@ -1,17 +1,23 @@
 .project-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-top: solid var(--header-bg-color) 2px;
   background-color: var(--box-color);
   text-align: center;
-  height: 42%;
+  height: 50%;
   width: 100%;
   transition: all ease-in 0.3s;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .project-title-container {
-  height: 35%;
+  margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: -50px;
 }
 
 .project-title {
@@ -27,7 +33,7 @@
 
 .description {
   text-align: center;
-  padding: 0 20px;
+  padding: 0 20% 5vh 20%;
 }
 
 .language-list {

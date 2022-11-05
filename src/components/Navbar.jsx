@@ -3,7 +3,6 @@ import Dropdown from './Dropdown';
 import './styles/navbar.css';
 
 // TODO: Fix navbar appearing when page reloads
-// TODO: Fix navigation fade times
 // TODO: Active element disappears after a bit?
 
 export default function Navbar() {

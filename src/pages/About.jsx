@@ -1,10 +1,10 @@
 import Spacer from '../components/Spacer';
 import './style/about.css';
 
-export default function About({ aboutRef }) {
+export default function About() {
   return (
     <>
-      <div className="about-container" id="about" ref={aboutRef}>
+      <div className="about-container" id="about">
         <div className="about-card">
           <div className="about-title-container">
             <h1>Hello World!</h1>

@@ -49,9 +49,10 @@
   opacity: 1;
 }
 
-.nav-container-li {
+.nav-container-li,
+.nav-container-li a {
   list-style: none;
-  transition: 0.5s;
+  transition: all 0.2s;
   position: relative;
 }
 
@@ -65,7 +66,7 @@
   position: absolute;
   bottom: -4px;
   left: calc(50% - 2.5px);
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .nav-container-li a:active::after {
@@ -79,64 +80,8 @@
 .resume-li {
   color: var(--text-color);
   cursor: default;
-  transition: none;
+  transition: all 0.2s;
 }
-
-/* .nav-container li a {
-  display: block;
-  position: relative;
-  text-decoration: none;
-  padding: 5px;
-  font-size: 18px;
-  transition: 0.5s;
-}
-
-.nav-container ul:hover li a {
-  transform: scale(1.2);
-  opacity: 0.2;
-  filter: blur(5px);
-}
-
-.nav-container ul li a:hover {
-  transform: scale(1.5);
-  opacity: 1;
-  filter: blur(0);
-  text-decoration: none;
-}
-
-.nav-container ul li a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 2px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 0.8) 0%,
-    rgba(255, 154, 0, 0.8) 10%,
-    rgba(208, 222, 33, 0.8) 20%,
-    rgba(79, 220, 74, 0.8) 30%,
-    rgba(63, 218, 216, 0.8) 40%,
-    rgba(47, 201, 226, 0.8) 50%,
-    rgba(28, 127, 238, 0.8) 60%,
-    rgba(95, 21, 242, 0.8) 70%,
-    rgba(186, 12, 248, 0.8) 80%,
-    rgba(251, 7, 217, 0.8) 90%,
-    rgba(255, 0, 0, 0.8) 100%
-  );
-  transition: 0.5s;
-  transform-origin: right;
-  transform: scaleX(0);
-  z-index: -1;
-}
-
-ul li a:hover::before {
-  transition: transform 0.5s;
-  transform-origin: left;
-  transform: scaleX(1);
-} */
 
 /*==============
 On Navbar scroll
@@ -144,7 +89,6 @@ On Navbar scroll
 
 .nav-container-scrolled {
   background: transparent;
-  text-shadow: 2px 2px 15px #000000;
   box-shadow: none;
 }
 
@@ -154,7 +98,6 @@ On Navbar scroll
 }
 
 .nav-container-scrolled .resume-li {
-  transition: none;
   color: #000000;
 }
 

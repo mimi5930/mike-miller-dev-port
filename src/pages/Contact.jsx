@@ -7,11 +7,11 @@ import {
   FaSpinner
 } from 'react-icons/fa';
 import { MdAlternateEmail } from 'react-icons/md';
-import { useRef } from 'react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Toast from '../components/Toast';
+import { useQuery } from '@tanstack/react-query';
 
-export default function Contact({ contactRef }) {
+export default function Contact() {
   const nameInput = useRef();
   const emailInput = useRef();
   const messageInput = useRef();
@@ -111,7 +111,7 @@ export default function Contact({ contactRef }) {
   }
 
   return (
-    <div className="contact-container" id="contact" ref={contactRef}>
+    <div className="contact-container" id="contact">
       <form className="contact-form" onSubmit={handleFormSubmit}>
         <h1 className="contact-page-title">Contact Mike</h1>
         <div className="form-input-container">

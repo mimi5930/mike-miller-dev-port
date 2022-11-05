@@ -27,7 +27,7 @@
 }
 
 .form-input-container {
-  background-color: var(--header-bg-color);
+  background-color: var(--form-color);
   box-shadow: var(--box-shadow);
   padding: 20px;
   width: 600px;

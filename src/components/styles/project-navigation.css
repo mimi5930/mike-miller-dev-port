@@ -1,7 +1,7 @@
 .project-navigation {
   display: flex;
   flex-direction: row;
-  height: 8%;
+  /* height: 8%; */
   justify-content: space-between;
   width: 100%;
   transition: all ease-in 0.3s;
@@ -19,7 +19,7 @@
 }
 
 .project-navigation button {
-  margin-bottom: 2px;
+  margin-bottom: 8px;
 }
 
 .links {

@@ -107,6 +107,8 @@ const projects = [
   }
 ];
 
+// TODO: Make mobile friendly
+
 export default function Portfolio() {
   // sets index for current project
   const [currentProject, setCurrentProject] = useState(0);

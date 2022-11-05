@@ -3,6 +3,7 @@ import Dropdown from './Dropdown';
 import './styles/navbar.css';
 
 // TODO: Active element disappears after a bit?
+// TODO: Add socials
 // TODO: Create Hamburger Menu
 // TODO: Add resume
 

@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import Dropdown from './Dropdown';
 import './styles/navbar.css';
 
-// TODO: Fix navbar appearing when page reloads
 // TODO: Active element disappears after a bit?
+// TODO: Create Hamburger Menu
+// TODO: Add resume
 
 export default function Navbar() {
   function onScroll() {

@@ -1,6 +1,5 @@
 import './style/portfolio.css';
 import ProjectDescription from '../components/ProjectDescription';
-import ProjectNavigation from '../components/ProjectNavigation';
 import {
   SiMongodb,
   SiGraphql,
@@ -16,6 +15,7 @@ import {
 import { DiMaterializecss } from 'react-icons/di';
 import { useState } from 'react';
 import Spacer from '../components/Spacer';
+import ProjectNavigation from '../components/ProjectNavigation';
 
 const projects = [
   {
@@ -132,6 +132,16 @@ export default function Portfolio() {
             url={projects[currentProject].url}
             gitHub={projects[currentProject].gitHub}
             setAnimation={setAnimation}
+            navigation={
+              <ProjectNavigation
+                projectsLength={projects.length}
+                currentProject={currentProject}
+                setCurrentProject={setCurrentProject}
+                url={projects[currentProject].url}
+                gitHub={projects[currentProject].gitHub}
+                setAnimation={setAnimation}
+              ></ProjectNavigation>
+            }
           />
         </div>
       </div>

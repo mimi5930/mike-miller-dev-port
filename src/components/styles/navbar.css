@@ -94,13 +94,13 @@ On Navbar scroll
 
 .nav-container-scrolled .title-container,
 .nav-container-scrolled a {
-  color: #000000;
+  color: var(--header-bg-color);
 }
 
 .nav-container-scrolled .resume-li {
-  color: #000000;
+  color: var(--header-bg-color);
 }
 
 .nav-container-scrolled .dropdown-item a {
-  color: var(--text-color);
+  color: var(--header-bg-color);
 }

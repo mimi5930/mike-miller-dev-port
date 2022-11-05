@@ -1,17 +1,11 @@
 import Spacer from './Spacer';
 import './styles/project-description.css';
-import ProjectNavigation from './ProjectNavigation';
 
 export default function ProjectDescription({
   title,
   languages,
   description,
-  projectsLength,
-  currentProject,
-  setCurrentProject,
-  url,
-  gitHub,
-  setAnimation
+  navigation
 }) {
   return (
     <div className="project-info-card">
@@ -43,14 +37,7 @@ export default function ProjectDescription({
       <div>
         <p className="description">{description}</p>
       </div>
-      <ProjectNavigation
-        projectsLength={projectsLength}
-        currentProject={currentProject}
-        setCurrentProject={setCurrentProject}
-        url={url}
-        gitHub={gitHub}
-        setAnimation={setAnimation}
-      />
+      {navigation}
     </div>
   );
 }

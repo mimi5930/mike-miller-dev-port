@@ -1,5 +1,6 @@
 import './styles/project-navigation.css';
 import { FiGithub, FiGlobe } from 'react-icons/fi';
+import { useMediaQuery } from '../utils/hooks/useMediaQuery';
 
 export default function ProjectNavigation({
   url,
@@ -9,6 +10,8 @@ export default function ProjectNavigation({
   projectsLength,
   setAnimation
 }) {
+  const smallerScreen = useMediaQuery('(max-width: 900px)');
+
   function prevProject() {
     setAnimation('prev-project');
     currentProject === 0
@@ -29,12 +32,24 @@ export default function ProjectNavigation({
       <div className="links">
         <button>
           <a href={url}>
-            <FiGlobe className="icon"></FiGlobe> Website
+            {smallerScreen ? (
+              <FiGlobe className="icon"></FiGlobe>
+            ) : (
+              <>
+                <FiGlobe className="icon"></FiGlobe> Website
+              </>
+            )}
           </a>
         </button>
         <button>
           <a href={gitHub}>
-            <FiGithub className="icon"></FiGithub> Repo{' '}
+            {smallerScreen ? (
+              <FiGithub className="icon"></FiGithub>
+            ) : (
+              <>
+                <FiGithub className="icon"></FiGithub> Repo
+              </>
+            )}
           </a>
         </button>
       </div>

@@ -1,13 +1,12 @@
 .project-navigation {
   display: flex;
   flex-direction: row;
-  /* height: 8%; */
   justify-content: space-between;
   width: 100%;
   transition: all ease-in 0.3s;
-  background-color: var(--box-color);
+  /* background-color: var(--box-color);
   border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px; */
 }
 
 .project-navigation > :first-child {
@@ -34,4 +33,22 @@
 a {
   color: var(--text-color);
   text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .project-navigation {
+    justify-content: space-evenly;
+  }
+
+  .project-navigation > :first-child {
+    margin-left: 0;
+  }
+
+  .project-navigation > :last-child {
+    margin-right: 0;
+  }
+
+  .links {
+    gap: none;
+  }
 }

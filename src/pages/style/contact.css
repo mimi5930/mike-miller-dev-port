@@ -162,7 +162,18 @@ input:-webkit-autofill:active {
   }
 }
 
+/* MOBILE DISPLAY */
+
 @media only screen and (max-width: 900px) {
+  .contact-container {
+    min-height: 100vh;
+  }
+
+  .contact-page-title {
+    font-size: 2em;
+    text-align: center;
+  }
+
   .form-input-container {
     width: 80%;
   }

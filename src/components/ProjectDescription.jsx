@@ -7,6 +7,7 @@ export default function ProjectDescription({
   description,
   navigation
 }) {
+  // TODO: Figure out spacing for tech list
   return (
     <div className="project-info-card">
       <div className="project-title-container">
@@ -34,7 +35,7 @@ export default function ProjectDescription({
         </div>
       </div>
       <Spacer className="project-info-spacer" />
-      <div>
+      <div className="description-container">
         <p className="description">{description}</p>
       </div>
       {navigation}

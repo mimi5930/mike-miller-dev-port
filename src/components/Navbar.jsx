@@ -1,27 +1,16 @@
-import { useEffect, useState } from 'react';
-import Dropdown from './Dropdown';
+import { useState } from 'react';
+import { useMediaQuery } from '../utils/hooks/useMediaQuery';
+import { useScroll } from '../utils/hooks/useScroll';
 import './styles/navbar.css';
+import NavigationLinks from './NavigationLinks';
 
 // TODO: Active element disappears after a bit?
 // TODO: Add socials
-// TODO: Create Hamburger Menu
 // TODO: Add resume
 
 export default function Navbar() {
-  function onScroll() {
-    window.scrollY ? setScroll(true) : setScroll(false);
-  }
-
-  const [scroll, setScroll] = useState(window.scrollY ? true : false);
-  const [dropdownDisplay, setDropdownDisplay] = useState(false);
-
-  useEffect(() => {
-    if (window.scrollY) onScroll();
-    window.addEventListener('scroll', onScroll);
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-    };
-  }, []);
+  const smallScreen = useMediaQuery('(max-width: 700px)');
+  const scroll = useScroll();
 
   return (
     <section
@@ -30,25 +19,7 @@ export default function Navbar() {
       <div className="title-container">
         <h1>Mike Miller</h1>
       </div>
-      <ul className="nav-container-ul">
-        <li className="nav-container-li">
-          <a href="#about">About</a>
-        </li>
-        <li className="nav-container-li">
-          <a href="#projects">Projects</a>
-        </li>
-        <li
-          className="nav-container-li resume-li"
-          onMouseEnter={() => setDropdownDisplay(true)}
-          onMouseLeave={() => setDropdownDisplay(false)}
-        >
-          Resume
-          <Dropdown display={dropdownDisplay}></Dropdown>
-        </li>
-        <li className="nav-container-li">
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      <NavigationLinks smallScreen={smallScreen}></NavigationLinks>
     </section>
   );
 }

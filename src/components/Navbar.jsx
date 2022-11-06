@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useMediaQuery } from '../utils/hooks/useMediaQuery';
 import { useScroll } from '../utils/hooks/useScroll';
 import './styles/navbar.css';

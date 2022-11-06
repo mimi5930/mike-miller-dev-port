@@ -38,6 +38,26 @@
   animation: move-right 0.2s, enter-left 0.3s 0.2s ease-out;
 }
 
+.index-circle-container {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.index-circle {
+  font-size: large;
+}
+
+.index-circle path {
+  box-shadow: var(--box-shadow);
+}
+
+.solid-circle {
+  color: var(--box-color);
+}
+
 @keyframes initial-enter {
   0% {
     opacity: 0;

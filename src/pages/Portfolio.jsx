@@ -13,6 +13,7 @@ import {
   SiChakraui
 } from 'react-icons/si';
 import { DiMaterializecss } from 'react-icons/di';
+import { FaCircle, FaRegCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Spacer from '../components/Spacer';
 import ProjectNavigation from '../components/ProjectNavigation';
@@ -23,7 +24,7 @@ const projects = [
     pic: 'ritual.png',
     languages: [
       { title: 'MongoDB', icon: <SiMongodb /> },
-      { title: 'GraphQl', icon: <SiGraphql /> },
+      { title: 'GraphQL', icon: <SiGraphql /> },
       { title: 'React', icon: <SiReact /> },
       { title: 'ChakraUI', icon: <SiChakraui /> }
     ],
@@ -112,10 +113,44 @@ export default function Portfolio() {
   const [currentProject, setCurrentProject] = useState(0);
   const [animation, setAnimation] = useState('');
 
+  const indexCircleClickHandler = index => {
+    if (currentProject > index) {
+      setAnimation('prev-project');
+      setCurrentProject(index);
+    } else if (currentProject < index) {
+      setAnimation('next-project');
+      setCurrentProject(index);
+    }
+  };
+
   return (
     <>
       <div className="project-container" id="projects">
         <h1 className="portfolio-page-title">Featured Projects</h1>
+        <div className="index-circle-container">
+          {projects.map((project, index) => {
+            if (index < currentProject + 1) {
+              return (
+                <FaCircle
+                  className="index-circle solid-circle"
+                  key={project.title}
+                  onClick={() => {
+                    indexCircleClickHandler(index);
+                  }}
+                ></FaCircle>
+              );
+            }
+            return (
+              <FaRegCircle
+                className="index-circle open-circle"
+                key={project.title}
+                onClick={() => {
+                  indexCircleClickHandler(index);
+                }}
+              ></FaRegCircle>
+            );
+          })}
+        </div>
         <div className={`project-card ${animation}`} key={Math.random()}>
           <img
             className="project-image"
@@ -126,12 +161,6 @@ export default function Portfolio() {
             title={projects[currentProject].title}
             languages={projects[currentProject].languages}
             description={projects[currentProject].description}
-            projectsLength={projects.length}
-            currentProject={currentProject}
-            setCurrentProject={setCurrentProject}
-            url={projects[currentProject].url}
-            gitHub={projects[currentProject].gitHub}
-            setAnimation={setAnimation}
             navigation={
               <ProjectNavigation
                 projectsLength={projects.length}

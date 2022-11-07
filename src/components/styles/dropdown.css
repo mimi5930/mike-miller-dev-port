@@ -3,15 +3,16 @@
   opacity: 0;
   background-color: var(--button-color);
   position: absolute;
-  left: 0;
+  left: calc(50% - 35px);
   top: 25px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   list-style: none;
-  padding-left: 0;
   padding: 5px;
   transition: all 0.3s linear;
+  width: 70px;
+  text-align: center;
 }
 
 .dropdown-container-show {
@@ -19,8 +20,13 @@
   opacity: 1;
 }
 
+.dropdown-container-icons {
+  width: 50px;
+  left: calc(50% - 25px);
+}
+
 .dropdown-container :not(:last-child) {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(129, 129, 129);
 }
 
 .dropdown-item a {
@@ -28,6 +34,10 @@
 }
 
 .dropdown-item a:hover {
-  opacity: 0.8;
+  opacity: 0.5;
   cursor: pointer;
+}
+
+.dropdown-item svg {
+  padding: 15px;
 }

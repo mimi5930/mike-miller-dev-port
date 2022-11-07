@@ -2,6 +2,8 @@
   --scroll-transition: all 0.4s ease-in;
 }
 
+/* NAVBAR */
+
 .nav-container {
   position: fixed;
   top: 0;
@@ -58,36 +60,13 @@
   position: relative;
 }
 
-.nav-container-li a::after {
-  visibility: hidden;
-  content: '';
-  background-color: black;
-  height: 5px;
-  width: 5px;
-  border-radius: 15px;
-  position: absolute;
-  bottom: -4px;
-  left: calc(50% - 2.5px);
-  transition: all 0.2s;
-}
-
-.nav-container-li a:active::after {
-  visibility: visible;
-}
-
-.nav-container-li a:visited::after {
-  visibility: visible;
-}
-
 .resume-li {
   color: var(--text-color);
   cursor: default;
   transition: all 0.2s;
 }
 
-/*==============
-On Navbar scroll
-===============*/
+/* NAVBAR SCROLLED */
 
 .nav-container-scrolled {
   background: transparent;
@@ -104,6 +83,14 @@ On Navbar scroll
 }
 
 .nav-container-scrolled .dropdown-item a {
+  color: var(--header-bg-color);
+}
+
+.nav-container-scrolled .dropdown-item svg {
+  color: var(--header-bg-color);
+}
+
+.nav-container-scrolled .social-icon {
   color: var(--header-bg-color);
 }
 

@@ -47,11 +47,9 @@
 }
 
 .index-circle {
+  cursor: pointer;
   font-size: large;
-}
-
-.index-circle path {
-  box-shadow: var(--box-shadow);
+  filter: drop-shadow(0 0 3px black);
 }
 
 .solid-circle {

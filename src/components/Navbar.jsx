@@ -3,7 +3,6 @@ import { useScroll } from '../utils/hooks/useScroll';
 import './styles/navbar.css';
 import NavigationLinks from './NavigationLinks';
 
-// TODO: Active element disappears after a bit?
 // TODO: Add socials
 // TODO: Add resume
 

@@ -9,11 +9,10 @@ export default function About() {
           <div className="about-title-container">
             <h1>Hello World!</h1>
             <p>
-              I am Mike Miller, an aspiring full-stack web developer and
-              musician in Woodbury, Minnesota. Having graduated from the
-              University of Minnesota's Coding Bootcamp through Trilogy
-              Education Services, I am excited to find ways to utilize my
-              passion for coding.
+              I am Mike Miller, a full-stack web developer and musician in
+              Woodbury, Minnesota. Having graduated from the University of
+              Minnesota's Coding Bootcamp through Trilogy Education Services, I
+              am excited to find ways to utilize my passion for coding.
             </p>
           </div>
           <img

@@ -4,31 +4,31 @@
     "pic": "ritual.png",
     "features": "MERN, GraphQL, Chakra UI, React useContext",
     "alt": "Ritual's homepage",
-    "url": "https://ritual-app-01.herokuapp.com/",
-    "gitHub": "https://github.com/Metelak/Ritual"
+    "url": "https://ritual-app.herokuapp.com/",
+    "gitHub": "https://github.com/mimi5930/Ritual"
   },
   {
     "name": "Travel Bug",
     "pic": "travel-bug.png",
     "alt": "Travel Bug's homepage",
     "features": "MySql, Handlebars, Express",
-    "url": "https://travelbug-project.herokuapp.com/",
-    "gitHub": "https://github.com/Metelak/Travel-bug"
+    "url": "https://travel-bug.herokuapp.com/",
+    "gitHub": "https://github.com/mimi5930/Travel-bug"
   },
   {
-    "name": "My Shopping List",
-    "pic": "my-shopping-list.png",
-    "alt": "My Shopping List's homepage",
-    "features": "Best Buy API, Bing Maps API, Materialize CSS",
-    "url": "https://mimi5930.github.io/my-shopping-list/",
-    "gitHub": "https://github.com/mimi5930/my-shopping-list"
+    "name": "Budget Buddy",
+    "pic": "budget-buddy-snapshot.png",
+    "alt": "Budget Buddy's homepage",
+    "features": "Express, ChartJS, IndexedDB, Service Workers",
+    "url": "https://budget-buddy-01.herokuapp.com/",
+    "gitHub": "https://github.com/mimi5930/Budget-Buddy"
   },
   {
     "name": "Code Crazy",
     "pic": "code-crazy.png",
     "alt": "Code Crazy's homepage",
     "features": "mySql, Handlebars, Express",
-    "url": "https://fathomless-dusk-37377.herokuapp.com/",
+    "url": "https://code-crazy.herokuapp.com/",
     "gitHub": "https://github.com/mimi5930/code-crazy"
   },
   {

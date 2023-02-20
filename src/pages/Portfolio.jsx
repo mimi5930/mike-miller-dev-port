@@ -1,5 +1,5 @@
-import './style/portfolio.css';
-import ProjectDescription from '../components/ProjectDescription';
+import './style/portfolio.css'
+import ProjectDescription from '../components/ProjectDescription'
 import {
   SiMongodb,
   SiGraphql,
@@ -11,12 +11,12 @@ import {
   SiCss3,
   SiJavascript,
   SiChakraui
-} from 'react-icons/si';
-import { DiMaterializecss } from 'react-icons/di';
-import { FaCircle, FaRegCircle } from 'react-icons/fa';
-import { useState } from 'react';
-import Spacer from '../components/Spacer';
-import ProjectNavigation from '../components/ProjectNavigation';
+} from 'react-icons/si'
+import { DiMaterializecss } from 'react-icons/di'
+import { FaCircle, FaRegCircle } from 'react-icons/fa'
+import { useState } from 'react'
+import Spacer from '../components/Spacer'
+import ProjectNavigation from '../components/ProjectNavigation'
 
 const projects = [
   {
@@ -31,8 +31,8 @@ const projects = [
     description:
       'Ritual is a goal setting application centered on wellness, where we can add new goals, track daily goals, and monitor progress.',
     alt: "Ritual's homepage",
-    url: 'https://ritual-app-01.herokuapp.com/',
-    gitHub: 'https://github.com/Metelak/Ritual'
+    url: 'https://ritual-app.herokuapp.com/',
+    gitHub: 'https://github.com/mimi5930/Ritual'
   },
   {
     title: 'Travel Bug',
@@ -45,24 +45,24 @@ const projects = [
     ],
     description:
       'Travel Bug is a webpage that hosts travel locations posted by users that allows individual users to browse for travel information and like locations to save to their personal login page. It also, lets the user create new location posts for other users to see in the homepage and lets them rate 1-5 stars on their trip/experience going to that location.',
-    url: 'https://travelbug-project.herokuapp.com/',
-    gitHub: 'https://github.com/Metelak/Travel-bug'
+    url: 'https://travel-bug.herokuapp.com/',
+    gitHub: 'https://github.com/mimi5930/Travel-bug'
   },
   {
-    title: 'My Shopping List',
-    pic: 'my-shopping-list.png',
-    alt: "My Shopping List's homepage",
+    title: 'Budget Buddy',
+    pic: 'budget-buddy-snapshot.png',
+    alt: "Budget Buddy's homepage",
     languages: [
       {
-        title: 'Materialize CSS',
-        icon: <DiMaterializecss />
+        title: 'Express',
+        icon: <SiExpress />
       },
-      { title: 'Best Buy API, Bing Maps API', icon: null }
+      { title: 'ChartJS, IndexedDB, Service Worker', icon: null }
     ],
     description:
-      'My Shopping List helps enhance a users shopping experience by allowing them to find the cost of the items they need at the Best Buy nearest to their location.',
-    url: 'https://mimi5930.github.io/my-shopping-list/',
-    gitHub: 'https://github.com/mimi5930/my-shopping-list'
+      "Budget Buddy is an app where a user can keep track of their expenses regardless of their internet connection! Just enter any transaction, and the provided information will be stored locally or in a MongoDB database based on the user's internet connection. The graph will adjust based on this input.",
+    url: 'https://budget-buddy-01.herokuapp.com/',
+    gitHub: 'https://github.com/mimi5930/Budget-Buddy'
   },
   {
     title: 'Code Crazy',
@@ -75,7 +75,7 @@ const projects = [
     ],
     description:
       "Code Crazy was designed for coding nerds around the world! In here, coders can add posts about their favorite... or least favorite aspects of coding. Create an account, log in, and start posting and commenting to your heart's content!",
-    url: 'https://fathomless-dusk-37377.herokuapp.com/',
+    url: 'https://code-crazy.herokuapp.com/',
     gitHub: 'https://github.com/mimi5930/code-crazy'
   },
   {
@@ -106,22 +106,22 @@ const projects = [
     url: 'https://kidsvisits.com',
     gitHub: 'https://github.com/mimi5930/kids-visits'
   }
-];
+]
 
 export default function Portfolio() {
   // sets index for current project
-  const [currentProject, setCurrentProject] = useState(0);
-  const [animation, setAnimation] = useState('');
+  const [currentProject, setCurrentProject] = useState(0)
+  const [animation, setAnimation] = useState('')
 
   const indexCircleClickHandler = index => {
     if (currentProject > index) {
-      setAnimation('prev-project');
-      setCurrentProject(index);
+      setAnimation('prev-project')
+      setCurrentProject(index)
     } else if (currentProject < index) {
-      setAnimation('next-project');
-      setCurrentProject(index);
+      setAnimation('next-project')
+      setCurrentProject(index)
     }
-  };
+  }
 
   return (
     <>
@@ -135,20 +135,20 @@ export default function Portfolio() {
                   className="index-circle solid-circle"
                   key={project.title}
                   onClick={() => {
-                    indexCircleClickHandler(index);
+                    indexCircleClickHandler(index)
                   }}
                 ></FaCircle>
-              );
+              )
             }
             return (
               <FaRegCircle
                 className="index-circle open-circle"
                 key={project.title}
                 onClick={() => {
-                  indexCircleClickHandler(index);
+                  indexCircleClickHandler(index)
                 }}
               ></FaRegCircle>
-            );
+            )
           })}
         </div>
         <div className={`project-card ${animation}`} key={Math.random()}>
@@ -176,5 +176,5 @@ export default function Portfolio() {
       </div>
       <Spacer />
     </>
-  );
+  )
 }

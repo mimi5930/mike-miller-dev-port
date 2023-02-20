@@ -3,9 +3,6 @@ import { useScroll } from '../utils/hooks/useScroll';
 import './styles/navbar.css';
 import NavigationLinks from './NavigationLinks';
 
-// TODO: Add socials
-// TODO: Add resume
-
 export default function Navbar() {
   const smallScreen = useMediaQuery('(max-width: 700px)');
   const scroll = useScroll();

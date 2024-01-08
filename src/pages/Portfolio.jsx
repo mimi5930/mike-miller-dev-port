@@ -102,7 +102,7 @@ const projects = [
       { title: 'Javascript', icon: <SiJavascript /> }
     ],
     description:
-      "Brenda Jacobson's website to provide parents with recourses for children.",
+      "Brenda Jacobson's website to provide parents with resources for children.",
     url: 'https://kidsvisits.com',
     gitHub: 'https://github.com/mimi5930/kids-visits'
   }

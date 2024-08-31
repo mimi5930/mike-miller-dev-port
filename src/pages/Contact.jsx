@@ -9,7 +9,6 @@ import {
 import { MdAlternateEmail } from 'react-icons/md';
 import { useRef, useState } from 'react';
 import Toast from '../components/Toast';
-import { useQuery } from '@tanstack/react-query';
 
 export default function Contact() {
   const nameInput = useRef();

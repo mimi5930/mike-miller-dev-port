@@ -1,6 +1,15 @@
-import './styles/project-navigation.css';
-import { FiGithub, FiGlobe } from 'react-icons/fi';
-import { useMediaQuery } from '../utils/hooks/useMediaQuery';
+import './styles/project-navigation.css'
+import { FiGithub, FiGlobe } from 'react-icons/fi'
+import { useMediaQuery } from '../utils/hooks/useMediaQuery'
+
+type ProjectNavigationProps = {
+  url: string
+  gitHub: string
+  currentProject: number
+  projectsLength: number
+  setCurrentProject: React.Dispatch<React.SetStateAction<number>>
+  setAnimation: React.Dispatch<React.SetStateAction<string>>
+}
 
 export default function ProjectNavigation({
   url,
@@ -9,21 +18,21 @@ export default function ProjectNavigation({
   setCurrentProject,
   projectsLength,
   setAnimation
-}) {
-  const smallerScreen = useMediaQuery('(max-width: 900px)');
+}: ProjectNavigationProps) {
+  const smallerScreen = useMediaQuery('(max-width: 900px)')
 
   function prevProject() {
-    setAnimation('prev-project');
+    setAnimation('prev-project')
     currentProject === 0
       ? setCurrentProject(projectsLength - 1)
-      : setCurrentProject(currentProject - 1);
+      : setCurrentProject(currentProject - 1)
   }
 
   function nexProject() {
-    setAnimation('next-project');
+    setAnimation('next-project')
     currentProject === projectsLength - 1
       ? setCurrentProject(0)
-      : setCurrentProject(currentProject + 1);
+      : setCurrentProject(currentProject + 1)
   }
 
   return (
@@ -55,5 +64,5 @@ export default function ProjectNavigation({
       </div>
       <button onClick={nexProject}>{'>'}</button>
     </div>
-  );
+  )
 }

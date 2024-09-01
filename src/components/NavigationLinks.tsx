@@ -1,6 +1,6 @@
-import './styles/navigation-links.css';
-import { useState, useEffect } from 'react';
-import Dropdown from './Dropdown';
+import './styles/navigation-links.css'
+import { useState, useEffect } from 'react'
+import Dropdown from './Dropdown'
 import {
   FiMenu,
   FiX,
@@ -9,13 +9,17 @@ import {
   FiFile,
   FiMail,
   FiArrowDown
-} from 'react-icons/fi';
-import { FiGithub, FiLinkedin } from 'react-icons/fi';
+} from 'react-icons/fi'
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
+
+type NavigationLinksProps = {
+  smallScreen: boolean
+}
 
 const resumeDropdown = [
   { name: 'View PDF', href: '#' },
   { name: 'Download PDF', href: '#' }
-];
+]
 
 const socialIcons = [
   {
@@ -26,32 +30,32 @@ const socialIcons = [
     icon: <FiLinkedin className="social-icon" />,
     href: 'https://www.linkedin.com/in/michael-miller-4b72331a2/'
   }
-];
+]
 
-export default function NavigationLinks({ smallScreen }) {
-  const [dropdownDisplay, setDropdownDisplay] = useState(false);
-  const [showDisplay, setShowDisplay] = useState(false);
-  const [hamburgerIcon, setHamburgerIcon] = useState(true);
-  const [currentIcon, setIcon] = useState(0);
-  const [socialDropdownDisplay, setSocialDropdownDisplay] = useState(false);
+export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
+  const [dropdownDisplay, setDropdownDisplay] = useState(false)
+  const [showDisplay, setShowDisplay] = useState(false)
+  const [hamburgerIcon, setHamburgerIcon] = useState(true)
+  const [currentIcon, setIcon] = useState(0)
+  const [socialDropdownDisplay, setSocialDropdownDisplay] = useState(false)
 
   useEffect(() => {
     if (!smallScreen) {
-      let count = 0;
+      let count = 0
       function cycleArray() {
-        setIcon(count);
-        count++;
-        if (count === socialIcons.length) count = 0;
+        setIcon(count)
+        count++
+        if (count === socialIcons.length) count = 0
       }
-      let interval = setInterval(cycleArray, 5000);
-      return () => clearInterval(interval);
+      let interval = setInterval(cycleArray, 5000)
+      return () => clearInterval(interval)
     }
-  }, [smallScreen]);
+  }, [smallScreen])
 
   const hamburgerClickHandler = () => {
-    setShowDisplay(!showDisplay);
-    setHamburgerIcon(!hamburgerIcon);
-  };
+    setShowDisplay(!showDisplay)
+    setHamburgerIcon(!hamburgerIcon)
+  }
 
   if (smallScreen) {
     return (
@@ -92,7 +96,7 @@ export default function NavigationLinks({ smallScreen }) {
           </ul>
         </div>
       </>
-    );
+    )
   }
 
   return (
@@ -131,5 +135,5 @@ export default function NavigationLinks({ smallScreen }) {
         <a href="#contact">Contact</a>
       </li>
     </ul>
-  );
+  )
 }

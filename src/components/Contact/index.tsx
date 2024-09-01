@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import {
   Button,
   Modal,
@@ -18,10 +18,16 @@ import {
 } from '@chakra-ui/react';
 import * as EmailValidator from 'email-validator';
 
+type Form = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 const Contact = ({ isOpen, onClose }) => {
   const initialRef = useRef();
 
-  const [formState, setFormState] = useState({
+  const [formState, setFormState] = useState<Form>({
     name: '',
     email: '',
     message: ''
@@ -31,7 +37,7 @@ const Contact = ({ isOpen, onClose }) => {
 
   const [error, setError] = useState('');
 
-  const [submitStatus, setSubmit] = useState(null);
+  // const [submitStatus, setSubmit] = useState(null);
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -44,7 +50,7 @@ const Contact = ({ isOpen, onClose }) => {
 
   const cancelHandler = () => {
     setFormState({ name: '', email: '', message: '' });
-    setSubmit(null);
+    // setSubmit(null);
     setError('');
     onClose();
   };
@@ -70,6 +76,7 @@ const Contact = ({ isOpen, onClose }) => {
       return;
     }
 
+    /*
     // send submission to form-froggy
     setLoading(true);
     try {
@@ -86,15 +93,16 @@ const Contact = ({ isOpen, onClose }) => {
         })
       });
       // if successful
-      setSubmit('success');
+      // setSubmit('success');
     } catch (error) {
-      setSubmit('error');
+      // setSubmit('error');
       console.log(error);
       return;
     }
     setLoading(false);
     return;
   };
+  */
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} initialFocusRef={initialRef}>

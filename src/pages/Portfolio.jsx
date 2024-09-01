@@ -17,6 +17,7 @@ import { FaCircle, FaRegCircle } from 'react-icons/fa'
 import { useState } from 'react'
 import Spacer from '../components/Spacer'
 import ProjectNavigation from '../components/ProjectNavigation'
+import { importImage } from '../utils'
 
 const projects = [
   {
@@ -154,7 +155,8 @@ export default function Portfolio() {
         <div className={`project-card ${animation}`} key={Math.random()}>
           <img
             className="project-image"
-            src={require(`../img/projects/${projects[currentProject].pic}`)}
+            // require(`../img/projects/${projects[currentProject].pic}`)
+            src={importImage(projects[currentProject].pic)}
             alt={projects[currentProject].alt}
           />
           <ProjectDescription

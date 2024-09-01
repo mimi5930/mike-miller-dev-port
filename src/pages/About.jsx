@@ -1,5 +1,6 @@
 import Spacer from '../components/Spacer';
 import './style/about.css';
+import mikeImage from '../img/mike.jpg';
 
 export default function About() {
   return (
@@ -15,11 +16,7 @@ export default function About() {
               am excited to find ways to utilize my passion for coding.
             </p>
           </div>
-          <img
-            className="about-image"
-            src={require('../img/mike.jpg')}
-            alt="Mike Miller"
-          ></img>
+          <img className="about-image" src={mikeImage} alt="Mike Miller"></img>
         </div>
       </div>
       <Spacer />

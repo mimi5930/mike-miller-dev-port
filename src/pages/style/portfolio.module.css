@@ -1,4 +1,4 @@
-.project-container {
+.container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,11 +7,11 @@
   overflow-x: hidden;
 }
 
-.portfolio-page-title {
+.page-title {
   font-size: 4em;
 }
 
-.project-card {
+.card {
   height: 70vh;
   width: 50vw;
   border-radius: 10px;
@@ -21,7 +21,7 @@
   animation: initial-enter 0.4s ease-in;
 }
 
-.project-image {
+.image {
   height: 50%;
   width: 100%;
   object-fit: cover;
@@ -112,19 +112,19 @@
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 900px), screen and (max-height: 1120px) {
-  .project-container {
+  .container {
     min-height: 100vh;
   }
 
-  .project-card {
+  .card {
     width: 70vw;
   }
 
-  .portfolio-page-title {
+  .page-title {
     font-size: 2em;
   }
 
-  .project-image {
+  .image {
     height: 30%;
     width: 100%;
   }

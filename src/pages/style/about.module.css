@@ -1,18 +1,18 @@
-.about-container {
+.container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-card {
+.card {
   display: flex;
   justify-content: center;
   width: 60vw;
   gap: 20px;
 }
 
-.about-title-container {
+.title-container {
   background-color: var(--box-color);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
@@ -21,7 +21,7 @@
   min-width: 25vw;
 }
 
-.about-image {
+.image {
   margin-top: 100px;
   max-width: 600px;
   border-radius: 10px;
@@ -29,17 +29,17 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .about-container {
+  .container {
     min-height: 100vh;
   }
 
-  .about-card {
+  .card {
     width: 80vw;
     flex-direction: column-reverse;
     gap: 0;
   }
 
-  .about-title-container {
+  .title-container {
     height: 35vh;
     padding-top: 6px;
     text-align: center;
@@ -47,7 +47,7 @@
     border-top-right-radius: 0;
   }
 
-  .about-image {
+  .image {
     margin-top: 100px;
     max-width: 100%;
     border-bottom-left-radius: 0;
@@ -56,7 +56,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  .about-title-container {
+  .title-container {
     height: 45vh;
   }
 }

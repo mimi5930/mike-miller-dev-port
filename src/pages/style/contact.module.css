@@ -1,4 +1,4 @@
-.contact-container {
+.container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,12 +7,12 @@
   overflow-x: hidden;
 }
 
-.contact-page-title {
+.pageTitle {
   font-size: 4em;
   text-align: center;
 }
 
-.contact-form {
+.form {
   min-height: 72vh;
   width: 70vw;
   background-color: var(--box-color);
@@ -26,7 +26,7 @@
   animation: initial-enter 0.4s ease-in;
 }
 
-.form-input-container {
+.inputContainer {
   background-color: var(--form-color);
   box-shadow: var(--box-shadow);
   padding: 20px;
@@ -38,14 +38,14 @@
   justify-content: flex-end;
 }
 
-.form-input-container label {
+.inputContainer label {
   display: block;
   width: 0;
   visibility: hidden;
 }
 
-.form-input-container input,
-.form-input-container textarea {
+.inputContainer input,
+.inputContainer textarea {
   font-family: var(--text-font);
   color: var(--text-color);
   width: 90%;
@@ -56,23 +56,23 @@
   resize: none;
 }
 
-.form-input-container input::placeholder,
-.form-input-container textarea::placeholder {
+.inputContainer input::placeholder,
+.inputContainer textarea::placeholder {
   color: var(--text-color);
   transition: opacity 0.2s ease-in;
 }
 
-.form-input-container input:focus,
-.form-input-container textarea:focus {
+.inputContainer input:focus,
+.inputContainer textarea:focus {
   outline: none;
 }
 
-.form-input-container input:focus::placeholder,
-.form-input-container textarea:focus::placeholder {
+.inputContainer input:focus::placeholder,
+.inputContainer textarea:focus::placeholder {
   opacity: 0;
 }
 
-.form-input-icon {
+.inputIcon {
   color: var(--button-color);
   font-size: 1.5em;
   position: absolute;
@@ -81,22 +81,20 @@
   transition: all 100ms;
 }
 
-.success-icon {
-  transition: all 1s;
+.successIcon {
   color: green;
 }
 
-.error-icon {
-  transition: all 1s;
+.errorIcon {
   color: red;
 }
 
-.form-input-container input:focus + .form-input-icon,
-.form-input-container textarea:focus + .form-input-icon {
+.inputContainer input:focus + .inputIcon,
+.inputContainer textarea:focus + .inputIcon {
   top: 33px;
 }
 
-.form-submit-button {
+.submitButton {
   width: 640px;
   transition: all 0.5s ease-out;
   display: flex;
@@ -104,17 +102,17 @@
   align-items: center;
 }
 
-.form-submit-button-loading {
+.submitButtonLoading {
   border-radius: 90px;
   max-width: 60px;
   transition: all 0.5s ease-out;
 }
 
-.form-submit-button:disabled {
+.submitButton:disabled {
   cursor: not-allowed;
 }
 
-.form-submit-button:disabled:hover {
+.submitButton:disabled:hover {
   background-color: var(--button-color);
 }
 
@@ -127,10 +125,10 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: var(--text-color) !important;
 }
 
-.loading-spinner {
+.loadingSpinner {
   color: var(--text-color);
-  animation: appear 1s ease-out forwards, spin 2s linear infinite,
-    grow-shrink 1.5s 1.5s linear alternate infinite;
+  animation: appear 1s ease-out forwards, spin 2s linear infinite;
+  /* grow-shrink 1.5s 1.5s linear alternate infinite; */
 }
 
 @keyframes appear {
@@ -165,25 +163,25 @@ input:-webkit-autofill:active {
 /* MOBILE DISPLAY */
 
 @media screen and (max-width: 900px), screen and (max-height: 1120px) {
-  .contact-container {
+  .container {
     min-height: 100vh;
   }
 
-  .contact-page-title {
+  .pageTitle {
     font-size: 2em;
     text-align: center;
   }
 
-  .form-input-container {
+  .inputContainer {
     width: 80%;
   }
 
-  .form-submit-button {
+  .submitButton {
     width: calc(80% + 40px);
   }
 
-  .form-input-container input,
-  .form-input-container textarea {
+  .inputContainer input,
+  .inputContainer textarea {
     margin-left: 25px;
   }
 }

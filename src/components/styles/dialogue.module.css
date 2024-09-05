@@ -1,0 +1,50 @@
+.dialogue {
+  border: none !important;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  width: 70vw;
+  max-height: 60vh;
+  animation: appear 0.3s ease-out forwards;
+}
+
+.dialogueWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dialogue::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.dialogueWrapper h1 {
+  margin: none 0;
+}
+
+.successText {
+  margin: 0;
+  color: var(--success-color);
+}
+
+.errorText {
+  margin: 0;
+  color: var(--alert-color);
+}
+
+.dialogue p {
+  margin: none 0;
+}
+
+@keyframes appear {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}

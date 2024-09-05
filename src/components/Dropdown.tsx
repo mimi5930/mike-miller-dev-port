@@ -6,7 +6,7 @@ type Items = {
   icon?: JSX.Element
 }[]
 
-type DropdownProps = {
+type DropdownProps = React.HTMLAttributes<HTMLUListElement> & {
   display?: boolean
   items: Items
   onlyIcons?: boolean
@@ -15,7 +15,8 @@ type DropdownProps = {
 export default function Dropdown({
   display = false,
   items,
-  onlyIcons = false
+  onlyIcons = false,
+  ...rest
 }: DropdownProps) {
   return (
     <ul
@@ -23,6 +24,7 @@ export default function Dropdown({
         ${display ? `${styles.containerShow}` : ''}${
         onlyIcons ? ` ${styles.containerIcons}` : ''
       }`}
+      {...rest}
     >
       {items.map((item, index) => {
         return (

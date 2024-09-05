@@ -12,6 +12,9 @@
   --button-color-active: #bbe6e4;
   --box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
   --form-color: #264653;
+  --img-background-color: #090a0e;
+  --success-color: #28b463;
+  --alert-color: #cb4335;
   /* Fonts */
   --heading-font: 'Sriracha', cursive;
   --text-font: 'Baloo 2', cursive;
@@ -48,7 +51,7 @@ p {
 
 .app {
   min-height: 300vh;
-  background: var(--main-bg-one);
+  background: var(--header-bg-color);
   background-image: linear-gradient(
     var(--main-bg-color-one),
     var(--main-bg-color-two),

@@ -7,7 +7,6 @@ type DialogueProps = React.HTMLAttributes<HTMLDialogElement> & {
   toggleDialogue: () => void
 }
 
-// TODO: Dialogue needs to be mobile-friendly
 const Dialogue = forwardRef<HTMLDialogElement, DialogueProps>(
   ({ toggleDialogue, success, ...props }, ref) => {
     const successMessage = {

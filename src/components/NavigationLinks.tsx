@@ -14,6 +14,7 @@ import { FiGithub, FiLinkedin } from 'react-icons/fi'
 
 type NavigationLinksProps = {
   smallScreen: boolean
+  scroll: boolean
 }
 
 const resumeDropdown = [
@@ -23,16 +24,21 @@ const resumeDropdown = [
 
 const socialIcons = [
   {
+    name: 'GitHub',
     icon: <FiGithub className={styles.socialIcon} />,
     href: 'https://github.com/mimi5930'
   },
   {
+    name: 'LinkedIn',
     icon: <FiLinkedin className={styles.socialIcon} />,
     href: 'https://www.linkedin.com/in/michael-miller-4b72331a2/'
   }
 ]
 
-export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
+export default function NavigationLinks({
+  smallScreen,
+  scroll
+}: NavigationLinksProps) {
   const [dropdownDisplay, setDropdownDisplay] = useState(false)
   const [showDisplay, setShowDisplay] = useState(false)
   const [hamburgerIcon, setHamburgerIcon] = useState(true)
@@ -62,41 +68,59 @@ export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
       <>
         {hamburgerIcon ? (
           <FiMenu
-            className={styles.hamburgerIcon}
+            className={`${styles.hamburgerIcon} ${
+              scroll && styles.hamburgerIconScrolled
+            }`}
             onClick={hamburgerClickHandler}
           ></FiMenu>
         ) : (
           <FiX
-            className={styles.hamburgerIcon}
+            className={`${styles.hamburgerIcon} ${
+              scroll && styles.hamburgerIconScrolled
+            }`}
             onClick={hamburgerClickHandler}
           ></FiX>
         )}
         <div
-          className={`${styles.drawer}${
-            showDisplay ? ` ${styles.drawerShow}` : ''
-          }`}
+          className={`${styles.drawer} ${
+            showDisplay && `${styles.drawerShow}`
+          } ${scroll && `${styles.drawerScrolled}`}`}
         >
-          <ul className={styles.drawerNavContainer}>
+          <ul className={`${styles.drawerNavContainer}`}>
             <li>
               <a href="#about" onClick={hamburgerClickHandler}>
-                <FiInfo></FiInfo> About
+                <FiInfo />
+                <p className={styles.drawerText}>About</p>
               </a>
             </li>
             <li>
               <a href="#projects" onClick={hamburgerClickHandler}>
-                <FiFolder></FiFolder> Projects
+                <FiFolder />
+                <p className={styles.drawerText}>Projects</p>
               </a>
             </li>
             <li className={styles.resumeList}>
               <a href="#resume-link" onClick={hamburgerClickHandler}>
-                <FiFile></FiFile> Resume
+                <FiFile />
+                <p className={styles.drawerText}>Resume</p>
               </a>
             </li>
-            <li>
+            <li className={styles.resumeList}>
               <a href="#contact" onClick={hamburgerClickHandler}>
-                <FiMail></FiMail> Contact
+                <FiMail />
+                <p className={styles.drawerText}>Contact</p>
               </a>
             </li>
+            {socialIcons.map(social => {
+              return (
+                <li className={styles.resumeList}>
+                  <a href={social.href} onClick={hamburgerClickHandler}>
+                    {social.icon}
+                    <p className={styles.drawerText}>{social.name}</p>
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </>
@@ -112,7 +136,7 @@ export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
         <a href="#projects">Projects</a>
       </li>
       <li
-        className={styles.resumeList}
+        className={`${styles.resumeList} ${scroll && styles.listScrolled}`}
         onMouseEnter={() => setDropdownDisplay(true)}
         onMouseLeave={() => setDropdownDisplay(false)}
       >
@@ -120,6 +144,7 @@ export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
         <Dropdown display={dropdownDisplay} items={resumeDropdown}></Dropdown>
       </li>
       <li
+        className={scroll ? styles.listScrolled : ''}
         onMouseEnter={() => setSocialDropdownDisplay(true)}
         onMouseLeave={() => setSocialDropdownDisplay(false)}
       >

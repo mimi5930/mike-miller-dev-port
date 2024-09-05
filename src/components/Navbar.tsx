@@ -16,7 +16,10 @@ export default function Navbar() {
       <div className={styles.titleContainer}>
         <h1>Mike Miller</h1>
       </div>
-      <NavigationLinks smallScreen={smallScreen}></NavigationLinks>
+      <NavigationLinks
+        smallScreen={smallScreen}
+        scroll={scroll}
+      ></NavigationLinks>
     </section>
   )
 }

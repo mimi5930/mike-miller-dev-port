@@ -7,7 +7,7 @@ export default function About() {
     <>
       <div className={styles.container} id="about">
         <div className={styles.card}>
-          <div className={styles['title-container']}>
+          <div className={styles.titleContainer}>
             <h1>Hello World!</h1>
             <p>
               I am Mike Miller, a full-stack web developer and musician in

@@ -24,13 +24,13 @@ export default function Portfolio() {
   return (
     <>
       <div className={styles.container} id="projects">
-        <h1 className={styles['page-title']}>Featured Projects</h1>
-        <div className={styles['index-circle-container']}>
+        <h1 className={styles.pageTitle}>Featured Projects</h1>
+        <div className={styles.indexCircleContainer}>
           {projects.map((project, index) => {
             if (index < currentProject + 1) {
               return (
                 <FaCircle
-                  className={`${styles['index-circle']} ${styles['solid-circle']}`}
+                  className={`${styles.indexCircle} ${styles.solidCircle}`}
                   key={project.title}
                   onClick={() => {
                     indexCircleClickHandler(index)
@@ -40,7 +40,7 @@ export default function Portfolio() {
             }
             return (
               <FaRegCircle
-                className={styles['index-circle']}
+                className={styles.indexCircle}
                 key={project.title}
                 onClick={() => {
                   indexCircleClickHandler(index)
@@ -49,10 +49,16 @@ export default function Portfolio() {
             )
           })}
         </div>
-        {/* TODO: FIGURE THIS OUT!?!?!?!? */}
-        <div className={styles.card + ' ' + { forwardAnimation ? `${styles['next-project']}` : `${styles['prev-project']}` }} key={Math.random()}>
+        <div
+          className={`${styles.card} ${
+            forwardAnimation
+              ? ` ${styles.nextProject}`
+              : ` ${styles.prevProject}`
+          }`}
+          key={Math.random()}
+        >
           <img
-            className="project-image"
+            className={styles.image}
             src={importImage(projects[currentProject].pic)}
             alt={projects[currentProject].alt}
           />

@@ -1,4 +1,4 @@
-.dropdown-container {
+.container {
   visibility: hidden;
   opacity: 0;
   background-color: var(--button-color);
@@ -15,29 +15,29 @@
   text-align: center;
 }
 
-.dropdown-container-show {
+.containerShow {
   visibility: visible;
   opacity: 1;
 }
 
-.dropdown-container-icons {
+.containerIcons {
   width: 50px;
   left: calc(50% - 25px);
 }
 
-.dropdown-container :not(:last-child) {
+.container :not(:last-child) {
   border-bottom: 2px solid rgb(129, 129, 129);
 }
 
-.dropdown-item a {
+.item a {
   color: var(--text-color);
 }
 
-.dropdown-item a:hover {
+.item a:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
-.dropdown-item svg {
+.item svg {
   padding: 15px;
 }

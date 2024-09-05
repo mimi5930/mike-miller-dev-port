@@ -7,7 +7,7 @@
   overflow-x: hidden;
 }
 
-.page-title {
+.pageTitle {
   font-size: 4em;
 }
 
@@ -30,15 +30,15 @@
   object-position: center top;
 }
 
-.next-project {
+.nextProject {
   animation: move-left 0.2s, enter-right 0.3s 0.2s ease-out;
 }
 
-.prev-project {
+.prevProject {
   animation: move-right 0.2s, enter-left 0.3s 0.2s ease-out;
 }
 
-.index-circle-container {
+.indexCircleContainer {
   display: flex;
   justify-content: center;
   width: 50vw;
@@ -46,13 +46,13 @@
   margin-bottom: 20px;
 }
 
-.index-circle {
+.indexCircle {
   cursor: pointer;
   font-size: large;
   filter: drop-shadow(0 0 3px black);
 }
 
-.solid-circle {
+.solidCircle {
   color: var(--box-color);
 }
 
@@ -120,7 +120,7 @@
     width: 70vw;
   }
 
-  .page-title {
+  .pageTitle {
     font-size: 2em;
   }
 

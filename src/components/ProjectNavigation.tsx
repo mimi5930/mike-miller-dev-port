@@ -8,7 +8,7 @@ type ProjectNavigationProps = {
   currentProject: number
   projectsLength: number
   setCurrentProject: React.Dispatch<React.SetStateAction<number>>
-  setAnimation: React.Dispatch<React.SetStateAction<string>>
+  setAnimation: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export default function ProjectNavigation({
@@ -22,14 +22,14 @@ export default function ProjectNavigation({
   const smallerScreen = useMediaQuery('(max-width: 900px)')
 
   function prevProject() {
-    setAnimation('prev-project')
+    setAnimation(false)
     currentProject === 0
       ? setCurrentProject(projectsLength - 1)
       : setCurrentProject(currentProject - 1)
   }
 
   function nexProject() {
-    setAnimation('next-project')
+    setAnimation(true)
     currentProject === projectsLength - 1
       ? setCurrentProject(0)
       : setCurrentProject(currentProject + 1)

@@ -1,16 +1,16 @@
-import './styles/dropdown.css';
+import styles from './styles/dropdown.module.css'
 
 type Items = {
-  name?: string;
-  href: string;
-  icon?: JSX.Element;
-}[];
+  name?: string
+  href: string
+  icon?: JSX.Element
+}[]
 
 type DropdownProps = {
-  display?: boolean;
-  items: Items;
-  onlyIcons?: boolean;
-};
+  display?: boolean
+  items: Items
+  onlyIcons?: boolean
+}
 
 export default function Dropdown({
   display = false,
@@ -19,20 +19,21 @@ export default function Dropdown({
 }: DropdownProps) {
   return (
     <ul
-      className={`dropdown-container${
-        display ? ' dropdown-container-show' : ''
-      }${onlyIcons ? ' dropdown-container-icons' : ''}`}
+      className={`${styles.container} 
+        ${display ? `${styles.containerShow}` : ''}${
+        onlyIcons ? ` ${styles.containerIcons}` : ''
+      }`}
     >
       {items.map((item, index) => {
         return (
-          <li className="dropdown-item" key={index}>
+          <li className={styles.item} key={index}>
             <a href={item.href}>
               {item.icon ?? ''}
               {item.name ?? ''}
             </a>
           </li>
-        );
+        )
       })}
     </ul>
-  );
+  )
 }

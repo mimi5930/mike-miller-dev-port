@@ -1,4 +1,4 @@
-import './styles/navigation-links.css'
+import styles from './styles/navigation-links.module.css'
 import { useState, useEffect } from 'react'
 import Dropdown from './Dropdown'
 import {
@@ -23,11 +23,11 @@ const resumeDropdown = [
 
 const socialIcons = [
   {
-    icon: <FiGithub className="social-icon" />,
+    icon: <FiGithub className={styles.socialIcon} />,
     href: 'https://github.com/mimi5930'
   },
   {
-    icon: <FiLinkedin className="social-icon" />,
+    icon: <FiLinkedin className={styles.socialIcon} />,
     href: 'https://www.linkedin.com/in/michael-miller-4b72331a2/'
   }
 ]
@@ -62,35 +62,39 @@ export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
       <>
         {hamburgerIcon ? (
           <FiMenu
-            className="nav-hamburger-icon"
+            className={styles.hamburgerIcon}
             onClick={hamburgerClickHandler}
           ></FiMenu>
         ) : (
           <FiX
-            className="nav-hamburger-icon"
+            className={styles.hamburgerIcon}
             onClick={hamburgerClickHandler}
           ></FiX>
         )}
-        <div className={`drawer${showDisplay ? ' drawer-show' : ''}`}>
-          <ul className="nav-container-ul drawer-nav-container-ul">
-            <li className="nav-container-li drawer-nav-container-li">
+        <div
+          className={`${styles.drawer}${
+            showDisplay ? ` ${styles.drawerShow}` : ''
+          }`}
+        >
+          <ul className={styles.drawerNavContainer}>
+            <li>
               <a href="#about" onClick={hamburgerClickHandler}>
-                <FiInfo className="nav-icon"></FiInfo> About
+                <FiInfo></FiInfo> About
               </a>
             </li>
-            <li className="nav-container-li drawer-nav-container-li">
+            <li>
               <a href="#projects" onClick={hamburgerClickHandler}>
-                <FiFolder className="nav-icon"></FiFolder> Projects
+                <FiFolder></FiFolder> Projects
               </a>
             </li>
-            <li className="nav-container-li resume-li drawer-nav-container-li">
+            <li className={styles.resumeList}>
               <a href="#resume-link" onClick={hamburgerClickHandler}>
-                <FiFile className="nav-icon"></FiFile> Resume
+                <FiFile></FiFile> Resume
               </a>
             </li>
-            <li className="nav-container-li drawer-nav-container-li">
+            <li>
               <a href="#contact" onClick={hamburgerClickHandler}>
-                <FiMail className="nav-icon"></FiMail> Contact
+                <FiMail></FiMail> Contact
               </a>
             </li>
           </ul>
@@ -100,15 +104,15 @@ export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
   }
 
   return (
-    <ul className="nav-container-ul">
-      <li className="nav-container-li">
+    <ul className={styles.containerList}>
+      <li>
         <a href="#about">About</a>
       </li>
-      <li className="nav-container-li">
+      <li>
         <a href="#projects">Projects</a>
       </li>
       <li
-        className="nav-container-li resume-li"
+        className={styles.resumeList}
         onMouseEnter={() => setDropdownDisplay(true)}
         onMouseLeave={() => setDropdownDisplay(false)}
       >
@@ -116,12 +120,11 @@ export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
         <Dropdown display={dropdownDisplay} items={resumeDropdown}></Dropdown>
       </li>
       <li
-        className="nav-container-li"
         onMouseEnter={() => setSocialDropdownDisplay(true)}
         onMouseLeave={() => setSocialDropdownDisplay(false)}
       >
         {socialDropdownDisplay ? (
-          <FiArrowDown className="social-icon" />
+          <FiArrowDown className={styles.socialIcon} />
         ) : (
           socialIcons[currentIcon].icon
         )}
@@ -131,7 +134,7 @@ export default function NavigationLinks({ smallScreen }: NavigationLinksProps) {
           onlyIcons={true}
         ></Dropdown>
       </li>
-      <li className="nav-container-li">
+      <li>
         <a href="#contact">Contact</a>
       </li>
     </ul>

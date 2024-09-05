@@ -3,7 +3,7 @@
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   padding: 2rem;
-  width: 70vw;
+  max-width: fit-content;
   max-height: 60vh;
   animation: appear 0.3s ease-out forwards;
 }
@@ -20,10 +20,6 @@
   backdrop-filter: blur(3px);
 }
 
-.dialogueWrapper h1 {
-  margin: none 0;
-}
-
 .successText {
   margin: 0;
   color: var(--success-color);
@@ -32,10 +28,6 @@
 .errorText {
   margin: 0;
   color: var(--alert-color);
-}
-
-.dialogue p {
-  margin: none 0;
 }
 
 @keyframes appear {

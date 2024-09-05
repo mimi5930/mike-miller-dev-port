@@ -25,7 +25,7 @@ export default function Contact() {
       : dialogRef.current.showModal()
   }
 
-  const handleDialogue = (success: boolean, error = false) => {
+  const handleDialogue = (success: boolean, error: boolean = false) => {
     if (success) {
       setSuccess(true)
       toggleDialogue()

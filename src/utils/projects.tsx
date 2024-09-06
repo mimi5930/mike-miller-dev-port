@@ -11,7 +11,22 @@ import {
   SiChakraui
 } from 'react-icons/si'
 
-const projects = [
+type ProjectLanguages = {
+  title: string
+  icon?: JSX.Element
+}[]
+
+export type Projects = {
+  title: string
+  pic: string
+  languages: ProjectLanguages
+  description: string
+  alt: string
+  url: string
+  gitHub: string
+}[]
+
+const projects: Projects = [
   {
     title: 'Ritual',
     pic: 'ritual.png',
@@ -50,7 +65,7 @@ const projects = [
         title: 'Express',
         icon: <SiExpress />
       },
-      { title: 'ChartJS, IndexedDB, Service Worker', icon: null }
+      { title: 'ChartJS, IndexedDB, Service Worker' }
     ],
     description:
       "Budget Buddy is an app where a user can keep track of their expenses regardless of their internet connection! Just enter any transaction, and the provided information will be stored locally or in a MongoDB database based on the user's internet connection. The graph will adjust based on this input.",

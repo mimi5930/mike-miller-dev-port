@@ -1,23 +1,22 @@
-.project-navigation {
+.projectNavigation {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  bottom: 5px;
   transition: all ease-in 0.3s;
-  /* background-color: var(--box-color);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
 }
 
-.project-navigation > :first-child {
+.projectNavigation > :first-child {
   margin-left: 10%;
 }
 
-.project-navigation > :last-child {
+.projectNavigation > :last-child {
   margin-right: 10%;
 }
 
-.project-navigation button {
+.projectNavigation button {
   margin-bottom: 8px;
 }
 
@@ -36,15 +35,15 @@ a {
 }
 
 @media only screen and (max-width: 900px) {
-  .project-navigation {
+  .projectNavigation {
     justify-content: space-evenly;
   }
 
-  .project-navigation > :first-child {
+  .projectNavigation > :first-child {
     margin-left: 0;
   }
 
-  .project-navigation > :last-child {
+  .projectNavigation > :last-child {
     margin-right: 0;
   }
 

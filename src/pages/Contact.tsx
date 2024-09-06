@@ -1,4 +1,4 @@
-import styles from './style/contact.module.css'
+import styles from './styles/contact.module.css'
 import {
   FaUserCircle,
   FaRegComment,

@@ -1,0 +1,29 @@
+/* TODO: Find a more reliable way than mt */
+.indexCircleContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  bottom: 6px;
+  left: 50%;
+  translate: -50%;
+}
+
+.indexCircle {
+  cursor: pointer;
+  font-size: x-small;
+  filter: drop-shadow(0 0 3px black);
+}
+
+.solidCircle {
+  color: var(--box-color);
+}
+
+@media only screen and (max-width: 800px) {
+  .indexCircle {
+    font-size: large;
+  }
+  .indexCircleContainer {
+    gap: 16px;
+  }
+}

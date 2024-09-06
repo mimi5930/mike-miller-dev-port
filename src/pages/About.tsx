@@ -1,5 +1,5 @@
 import Spacer from '../components/Spacer'
-import styles from './style/about.module.css'
+import styles from './styles/about.module.css'
 import mikeImage from '../img/mike.jpg'
 
 export default function About() {

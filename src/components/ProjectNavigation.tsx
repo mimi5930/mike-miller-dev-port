@@ -1,51 +1,46 @@
-import './styles/project-navigation.css'
+import styles from './styles/projectNavigation.module.css'
 import { FiGithub, FiGlobe } from 'react-icons/fi'
 import { useMediaQuery } from '../utils/hooks/useMediaQuery'
+import { type Projects } from '../utils'
 
 type ProjectNavigationProps = {
-  url: string
-  gitHub: string
+  projects: Projects
   currentProject: number
-  projectsLength: number
   setCurrentProject: React.Dispatch<React.SetStateAction<number>>
-  setAnimation: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export default function ProjectNavigation({
-  url,
-  gitHub,
+  projects,
   currentProject,
-  setCurrentProject,
-  projectsLength,
-  setAnimation
+  setCurrentProject
 }: ProjectNavigationProps) {
   const smallerScreen = useMediaQuery('(max-width: 900px)')
 
   function prevProject() {
-    setAnimation(false)
     currentProject === 0
-      ? setCurrentProject(projectsLength - 1)
+      ? setCurrentProject(projects.length - 1)
       : setCurrentProject(currentProject - 1)
   }
 
   function nexProject() {
-    setAnimation(true)
-    currentProject === projectsLength - 1
+    currentProject === projects.length - 1
       ? setCurrentProject(0)
       : setCurrentProject(currentProject + 1)
   }
 
+  const { url, gitHub } = projects[currentProject]
+
   return (
-    <div className="project-navigation">
+    <div className={styles.projectNavigation}>
       <button onClick={prevProject}>{'<'}</button>
-      <div className="links">
+      <div className={styles.links}>
         <button>
           <a href={url}>
             {smallerScreen ? (
-              <FiGlobe className="icon"></FiGlobe>
+              <FiGlobe className={styles.icon}></FiGlobe>
             ) : (
               <>
-                <FiGlobe className="icon"></FiGlobe> Website
+                <FiGlobe className={styles.icon}></FiGlobe> Website
               </>
             )}
           </a>
@@ -53,10 +48,10 @@ export default function ProjectNavigation({
         <button>
           <a href={gitHub}>
             {smallerScreen ? (
-              <FiGithub className="icon"></FiGithub>
+              <FiGithub className={styles.icon}></FiGithub>
             ) : (
               <>
-                <FiGithub className="icon"></FiGithub> Repo
+                <FiGithub className={styles.icon}></FiGithub> Repo
               </>
             )}
           </a>

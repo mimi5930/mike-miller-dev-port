@@ -1,10 +1,12 @@
 .container {
   visibility: hidden;
   opacity: 0;
-  background-color: var(--button-color);
+  background-color: var(--header-bg-color);
+  border-radius: 10px;
   position: absolute;
-  left: calc(50% - 35px);
-  top: 25px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +15,7 @@
   transition: all 0.3s linear;
   width: 70px;
   text-align: center;
+  box-shadow: var(--box-shadow);
 }
 
 .containerShow {
@@ -22,11 +25,11 @@
 
 .containerIcons {
   width: 50px;
-  left: calc(50% - 25px);
 }
 
 .container :not(:last-child) {
-  border-bottom: 2px solid rgb(129, 129, 129);
+  border-bottom: 2px solid var(--text-color);
+  padding: 0px 5px;
 }
 
 .item a {
@@ -39,5 +42,5 @@
 }
 
 .item svg {
-  padding: 15px;
+  padding: 12px;
 }

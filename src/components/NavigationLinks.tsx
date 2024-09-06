@@ -111,9 +111,9 @@ export default function NavigationLinks({
                 <p className={styles.drawerText}>Contact</p>
               </a>
             </li>
-            {socialIcons.map(social => {
+            {socialIcons.map((social, index) => {
               return (
-                <li className={styles.resumeList}>
+                <li className={styles.resumeList} key={index}>
                   <a href={social.href} onClick={hamburgerClickHandler}>
                     {social.icon}
                     <p className={styles.drawerText}>{social.name}</p>

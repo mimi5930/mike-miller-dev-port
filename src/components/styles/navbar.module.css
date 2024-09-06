@@ -36,4 +36,5 @@
 .containerScrolled h1,
 .containerScrolled a {
   color: var(--header-bg-color);
+  font-weight: bold;
 }

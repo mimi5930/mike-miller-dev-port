@@ -35,6 +35,7 @@
 
 .listScrolled {
   color: var(--header-bg-color);
+  font-weight: bold;
 }
 
 /* HAMBURGER MENU */

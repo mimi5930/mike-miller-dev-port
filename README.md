@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+![Version][version]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Michael Miller Developer Portfolio
 
-## Available Scripts
+![screenshot of the website's landing page](./src//img/portfolio-screenshot.png)
 
-In the project directory, you can run:
+## Built with
 
-### `npm start`
+[![Vite][viteBadge]][viteUrl]
+[![React][reactBadge]][reactUrl]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### [Website][websiteUrl]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Hello World!
 
-### `npm test`
+I am Mike Miller, a full-stack web developer and musician based in Woodbury, Minnesota. Having graduated from the University of Minnesota's Coding Bootcamp through Trilogy Education Services, I am excited to find ways to utilize my passion for coding.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+With a strong foundation in both front-end and back-end technologies, I thrive on creating seamless and dynamic web applications. My journey into web development began with a curiosity for how things work behind the scenes, and it quickly grew into a full-fledged passion. I enjoy tackling complex problems and turning ideas into reality through code.
 
-### `npm run build`
+In addition to my technical skills, I bring a creative perspective to my projects, thanks to my background in music. This unique combination allows me to approach challenges with a fresh and innovative mindset. Whether I'm composing a new piece of music or developing a new feature, I am driven by a desire to create and improve.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I am always eager to learn and stay updated with the latest industry trends and best practices. Collaboration and continuous improvement are at the heart of my work ethic. I believe in the power of teamwork and am always open to new opportunities to grow and contribute.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When I'm not coding or playing music, you can find me exploring the outdoors, experimenting with new recipes in the kitchen, or spending quality time with family and friends. I am excited to connect with like-minded individuals and explore new opportunities in the tech world.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+This project is designed to be hosted as a static site on gh-pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+git clone git@github.com:mimi5930/mike-miller-dev-port.git
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install packages in root directory
 
-## Learn More
+```sh
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Run development server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```sh
+npm start
+```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+npm run deploy
+```
 
-### `npm run build` fails to minify
+## Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions please email me at mikej.miller440@gmail.com
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[version]: https://img.shields.io/badge/Version-2.0-green?style=flat-square
+[reactBadge]: https://img.shields.io/badge/React-4A4A55?logo=react
+[ReactUrl]: https://react.dev/
+[viteBadge]: https://img.shields.io/badge/Vite-gray?logo=vite
+[viteUrl]: https://vitejs.dev/
+[websiteUrl]: https://millerdevelops.com/

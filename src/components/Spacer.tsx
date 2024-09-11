@@ -6,6 +6,7 @@ export default function Spacer({ ...props }: Spacer) {
   return (
     <hr
       className={`${styles.spacer} ${props.className && props.className}`}
+      {...props}
     ></hr>
   )
 }

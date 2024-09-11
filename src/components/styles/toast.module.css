@@ -1,4 +1,4 @@
-.toast-container {
+.toastContainer {
   width: 300px;
   background-color: var(--header-bg-color);
   color: var(--text-color);
@@ -14,17 +14,17 @@
   bottom: 30px;
 }
 
-.toast-icon {
+.toastIcon {
   top: 2px;
   margin-right: 5px;
   position: relative;
 }
 
-.toast-success-icon {
+.toastSuccessIcon {
   color: green;
 }
 
-.toast-error-icon {
+.toastErrorIcon {
   color: red;
 }
 

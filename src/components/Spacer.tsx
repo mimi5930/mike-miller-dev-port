@@ -1,9 +1,11 @@
-import './styles/spacer.css'
+import styles from './styles/spacer.module.css'
 
-type SpacerProps = {
-  className?: React.HTMLAttributes<HTMLHRElement>['className']
-}
+type Spacer = React.HTMLAttributes<HTMLHRElement>
 
-export default function Spacer({ className = '' }: SpacerProps) {
-  return <hr className={`spacer${className ? ` ${className}` : ''}`}></hr>
+export default function Spacer({ ...props }: Spacer) {
+  return (
+    <hr
+      className={`${styles.spacer} ${props.className && props.className}`}
+    ></hr>
+  )
 }

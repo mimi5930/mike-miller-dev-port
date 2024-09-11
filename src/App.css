@@ -24,6 +24,10 @@
   --scroll-transition: all 0.4s ease-in;
 }
 
+body {
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }

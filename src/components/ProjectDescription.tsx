@@ -4,20 +4,23 @@ import { type Projects } from '../utils'
 
 type ProjectDescriptionProps = React.HTMLAttributes<HTMLDivElement> & {
   projects: Projects
-  navigation: JSX.Element
   currentProject: number
 }
 
 export default function ProjectDescription({
   projects,
-  navigation,
   currentProject,
   ...props
 }: ProjectDescriptionProps) {
   // TODO: Figure out spacing for tech list
   const { title, languages, description } = projects[currentProject]
   return (
-    <div {...props} className={styles.projectInfoCard}>
+    <div
+      className={`${styles.projectInfoCard} ${
+        props.className && props.className
+      }`}
+      {...props}
+    >
       <div className={styles.projectTitleContainer}>
         <h2 className={styles.projectTitle}>{title}</h2>
         <div className={styles.languageContainer}>
@@ -49,7 +52,6 @@ export default function ProjectDescription({
       <div className={styles.descriptionContainer}>
         <p className={styles.description}>{description}</p>
       </div>
-      {navigation}
     </div>
   )
 }

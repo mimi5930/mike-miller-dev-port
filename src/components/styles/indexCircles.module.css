@@ -3,10 +3,10 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  gap: 6px;
-  bottom: 6px;
-  left: 50%;
-  translate: -50%;
+  gap: 8px;
+  left: 8px;
+  top: 8px;
+  z-index: 5;
 }
 
 .indexCircle {
@@ -20,10 +20,17 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .indexCircle {
-    font-size: large;
-  }
   .indexCircleContainer {
     gap: 16px;
+    left: 50%;
+    translate: -50%;
+    padding: 6px;
+    border-radius: 10px;
+    background: var(--box-color-transparent);
+    backdrop-filter: blur(3px);
+  }
+
+  .indexCircle {
+    font-size: large;
   }
 }

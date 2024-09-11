@@ -1,19 +1,18 @@
 .projectNavigation {
   position: absolute;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  bottom: 5px;
+  bottom: 0;
   transition: all ease-in 0.3s;
 }
 
 .projectNavigation > :first-child {
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .projectNavigation > :last-child {
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .projectNavigation button {
@@ -22,7 +21,7 @@
 
 .links {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .icon {

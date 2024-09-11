@@ -33,18 +33,16 @@ export default function Portfolio() {
           currentProject={currentProject}
           setCurrentProject={setCurrentProject}
         />
+        <ProjectDescription
+          projects={projects}
+          currentProject={currentProject}
+        />
+        <ProjectNavigation
+          projects={projects}
+          currentProject={currentProject}
+          setCurrentProject={setCurrentProject}
+        ></ProjectNavigation>
       </div>
-      <ProjectDescription
-        projects={projects}
-        currentProject={currentProject}
-        navigation={
-          <ProjectNavigation
-            projects={projects}
-            currentProject={currentProject}
-            setCurrentProject={setCurrentProject}
-          ></ProjectNavigation>
-        }
-      />
     </section>
   )
 }

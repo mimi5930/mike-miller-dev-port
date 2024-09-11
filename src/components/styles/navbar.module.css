@@ -20,7 +20,7 @@
   transition: var(--scroll-transition);
 }
 
-.titleContainer > h1 {
+.titleContainer a h1 {
   font-size: 3rem;
   margin: 0;
 }

@@ -14,7 +14,9 @@ export default function Navbar() {
       }`}
     >
       <div className={styles.titleContainer}>
-        <h1>Mike Miller</h1>
+        <a href="/#about">
+          <h1>Mike Miller</h1>
+        </a>
       </div>
       <NavigationLinks
         smallScreen={smallScreen}

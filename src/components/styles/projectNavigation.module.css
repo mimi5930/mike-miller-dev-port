@@ -1,0 +1,52 @@
+.projectNavigation {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  transition: all ease-in 0.3s;
+}
+
+.projectNavigation > :first-child {
+  margin-left: 5%;
+}
+
+.projectNavigation > :last-child {
+  margin-right: 5%;
+}
+
+.projectNavigation button {
+  margin-bottom: 8px;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  margin-bottom: -2.7px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .projectNavigation {
+    justify-content: space-evenly;
+  }
+
+  .projectNavigation > :first-child {
+    margin-left: 0;
+  }
+
+  .projectNavigation > :last-child {
+    margin-right: 0;
+  }
+
+  .links {
+    gap: none;
+  }
+}

@@ -1,0 +1,46 @@
+.container {
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--header-bg-color);
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 5px;
+  transition: all 0.3s linear;
+  width: 70px;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.containerShow {
+  visibility: visible;
+  opacity: 1;
+}
+
+.containerIcons {
+  width: 50px;
+}
+
+.container :not(:last-child) {
+  border-bottom: 2px solid var(--text-color);
+  padding: 0px 5px;
+}
+
+.item a {
+  color: var(--text-color);
+}
+
+.item a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.item svg {
+  padding: 12px;
+}

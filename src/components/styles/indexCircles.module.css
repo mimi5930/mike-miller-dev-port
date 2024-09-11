@@ -1,0 +1,44 @@
+.indexCircleContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  left: 8px;
+  top: 8px;
+  z-index: 5;
+}
+
+.indexCircle {
+  cursor: pointer;
+  font-size: x-small;
+  filter: drop-shadow(0 0 3px black);
+  transition: transform 200ms ease-out;
+}
+
+.indexCircle:hover {
+  transform: scale(1.2);
+}
+
+.indexCircle:active {
+  transform: scale(0.8);
+}
+
+.solidCircle {
+  color: var(--box-color);
+}
+
+@media only screen and (max-width: 800px) {
+  .indexCircleContainer {
+    gap: 16px;
+    left: 50%;
+    translate: -50%;
+    padding: 6px;
+    border-radius: 10px;
+    background: var(--box-color-transparent);
+    backdrop-filter: blur(3px);
+  }
+
+  .indexCircle {
+    font-size: large;
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  background: var(--header-bg-color);
+  color: var(--title-color);
+  transition: var(--scroll-transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: var(--box-shadow);
+  z-index: 999;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-left: 20px;
+  transition: var(--scroll-transition);
+}
+
+.titleContainer a h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* NAVBAR SCROLLED */
+
+.containerScrolled {
+  backdrop-filter: blur(5px);
+  background-color: var(--header-bg-color-transparent);
+  box-shadow: none;
+}
+
+.containerScrolled h1,
+.containerScrolled a {
+  color: var(--header-bg-color);
+  font-weight: bold;
+}

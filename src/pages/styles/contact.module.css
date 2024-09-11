@@ -1,0 +1,188 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.pageTitle {
+  font-size: 4em;
+  text-align: center;
+}
+
+.form {
+  min-height: 72vh;
+  width: 70vw;
+  background-color: var(--box-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: initial-enter 0.4s ease-in;
+}
+
+.inputContainer {
+  background-color: var(--form-color);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  width: 600px;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inputContainer label {
+  display: block;
+  width: 0;
+  visibility: hidden;
+}
+
+.inputContainer input,
+.inputContainer textarea {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  width: 90%;
+  padding: 16px;
+  border: none;
+  background-color: inherit;
+  font-size: 16px;
+  resize: none;
+}
+
+.inputContainer input::placeholder,
+.inputContainer textarea::placeholder {
+  color: var(--text-color);
+  transition: opacity 0.2s ease-in;
+}
+
+.inputContainer input:focus,
+.inputContainer textarea:focus {
+  outline: none;
+}
+
+.inputContainer input:focus::placeholder,
+.inputContainer textarea:focus::placeholder {
+  opacity: 0;
+}
+
+.inputIcon {
+  color: var(--button-color);
+  font-size: 1.5em;
+  position: absolute;
+  top: 35px;
+  left: 32px;
+  transition: all 100ms;
+}
+
+.successIcon {
+  color: green;
+}
+
+.errorIcon {
+  color: red;
+}
+
+.inputContainer input:focus + .inputIcon,
+.inputContainer textarea:focus + .inputIcon {
+  top: 33px;
+}
+
+.submitButton {
+  width: 640px;
+  transition: all 0.5s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitButtonLoading {
+  border-radius: 90px;
+  max-width: 60px;
+  transition: all 0.5s ease-out;
+  transition: translate 200ms ease-out;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+}
+
+.submitButton:disabled:hover {
+  background-color: var(--button-color);
+}
+
+/* autofill settings */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--header-bg-color) inset !important;
+  -webkit-text-fill-color: var(--text-color) !important;
+}
+
+.loadingSpinner {
+  color: var(--text-color);
+  animation: appear 1s ease-out forwards, spin 2s linear infinite;
+  /* grow-shrink 1.5s 1.5s linear alternate infinite; */
+}
+
+@keyframes appear {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes grow-shrink {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 2;
+  }
+}
+
+/* MOBILE DISPLAY */
+
+@media screen and (max-width: 900px), screen and (max-height: 1120px) {
+  .container {
+    min-height: 100vh;
+  }
+
+  .pageTitle {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .inputContainer {
+    width: 80%;
+  }
+
+  .submitButton {
+    width: calc(80% + 40px);
+  }
+
+  .inputContainer input,
+  .inputContainer textarea {
+    margin-left: 25px;
+  }
+}

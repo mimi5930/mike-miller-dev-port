@@ -1,0 +1,25 @@
+.line {
+  animation: bounceVertical 0.4s alternate ease-in-out infinite;
+}
+
+.svg {
+  animation: moveHorizontal 0.7s alternate ease-in-out infinite;
+}
+
+@keyframes bounceVertical {
+  0% {
+    transform: translateY(2px) translateX(0px);
+  }
+  100% {
+    transform: translateY(2.5px) translateX(-0.1px);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}

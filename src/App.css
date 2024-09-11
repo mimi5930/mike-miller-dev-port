@@ -1,4 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Sriracha&display=swap');
+
+:root {
+  --main-bg-color-one: #cbf3f0;
+  --main-bg-color-two: #2ec4b6;
+  --main-bg-color-three: #ff9f1c;
+  --header-bg-color: #264653;
+  --header-bg-color-transparent: #26465327;
+  --title-color: #cbf3f0;
+  --text-color: #e0fbfc;
+  --box-color: #e9f1f7;
+  --box-color-transparent: #e9f1f7c9;
+  --button-color: #42bfdd;
+  --button-color-active: #bbe6e4;
+  --box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+  --form-color: #264653;
+  --img-background-color: #090a0e;
+  --success-color: #28b463;
+  --alert-color: #cb4335;
+  /* Fonts */
+  --heading-font: 'Sriracha', cursive;
+  --text-font: 'Baloo 2', cursive;
+  /* Animations */
+  --scroll-transition: all 0.4s ease-in;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Font Styling */
+
+h1 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
+h2 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
+li {
+  font-family: var(--text-font);
+}
+
+p {
+  font-family: var(--text-font);
+  font-weight: 500;
+}
+
+/* ================ */
+
+.app {
+  min-height: 300vh;
+  background: var(--header-bg-color);
+  background-image: linear-gradient(
+    var(--main-bg-color-one),
+    var(--main-bg-color-two),
+    var(--main-bg-color-three)
+  );
+  z-index: 0;
+}
+
 .project-box:hover {
   opacity: 75%;
   transition: 300ms;
+}
+
+/* General Button */
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--button-color);
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  color: var(--text-color);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.75rem 1.2rem;
+  text-align: center;
+  transition: all ease-in 0.2s;
+  transition: transform 200ms ease-out;
+  box-shadow: var(--box-shadow);
+}
+
+button:hover {
+  background-color: var(--button-color-active);
+}
+
+button:focus {
+  outline: 2px solid var(--button-color-active);
+  outline-offset: -1px;
+}
+
+button:active {
+  transform: scale(0.9);
 }

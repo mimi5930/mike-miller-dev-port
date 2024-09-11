@@ -1,0 +1,131 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.pageTitle {
+  font-size: 4em;
+}
+
+.card {
+  height: 70vh;
+  width: 50vw;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  animation: initial-enter 0.4s ease-in;
+}
+
+.image {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  object-position: center top;
+}
+
+.nextProject {
+  animation: move-left 0.2s, enter-right 0.3s 0.2s ease-out;
+}
+
+.prevProject {
+  animation: move-right 0.2s, enter-left 0.3s 0.2s ease-out;
+}
+
+.indexCircleContainer {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.indexCircle {
+  cursor: pointer;
+  font-size: large;
+  filter: drop-shadow(0 0 3px black);
+}
+
+.solidCircle {
+  color: var(--box-color);
+}
+
+@keyframes initial-enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0);
+    filter: blur(20px) grayscale(100%);
+  }
+  100% {
+    transform: translateX(-3000px);
+    filter: blur(0) grayscale(100%);
+  }
+}
+
+@keyframes enter-right {
+  0% {
+    transform: translateX(3000px);
+    filter: blur(20px);
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0);
+    filter: blur(20px) grayscale(100%);
+  }
+  100% {
+    transform: translateX(3000px);
+    filter: blur(0) grayscale(100%);
+  }
+}
+
+@keyframes enter-left {
+  0% {
+    transform: translateX(-3000px);
+    filter: blur(20px);
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 900px), screen and (max-height: 1120px) {
+  .container {
+    min-height: 100vh;
+  }
+
+  .card {
+    width: 70vw;
+  }
+
+  .pageTitle {
+    font-size: 2em;
+  }
+
+  .image {
+    height: 30%;
+    width: 100%;
+  }
+}

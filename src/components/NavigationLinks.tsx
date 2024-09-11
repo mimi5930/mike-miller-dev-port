@@ -1,6 +1,6 @@
 import styles from './styles/navigation-links.module.css'
 import { useState, useEffect } from 'react'
-import Dropdown from './Dropdown'
+import Dropdown, { type Item } from './Dropdown'
 import {
   FiMenu,
   FiX,
@@ -11,18 +11,23 @@ import {
   FiArrowDown
 } from 'react-icons/fi'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import resumePDF from '../files/Michael Miller Software Engineer Resume 2022.pdf'
 
 type NavigationLinksProps = {
   smallScreen: boolean
   scroll: boolean
 }
 
-const resumeDropdown = [
-  { name: 'View PDF', href: '#' },
-  { name: 'Download PDF', href: '#' }
+const resumeDropdown: Item[] = [
+  {
+    name: 'View PDF',
+    href: resumePDF,
+    anchorProps: { rel: 'noreferrer', target: '_blank' }
+  },
+  { name: 'Download PDF', href: resumePDF, anchorProps: { download: true } }
 ]
 
-const socialIcons = [
+const socialIcons: Item[] = [
   {
     name: 'GitHub',
     icon: <FiGithub className={styles.socialIcon} />,
@@ -99,9 +104,13 @@ export default function NavigationLinks({
                 <p className={styles.drawerText}>Projects</p>
               </a>
             </li>
-            {/* TODO: Add resume */}
             <li className={styles.resumeList}>
-              <a href="#resume-link" onClick={hamburgerClickHandler}>
+              <a
+                href={resumePDF}
+                target="_blank"
+                rel="noreferrer"
+                onClick={hamburgerClickHandler}
+              >
                 <FiFile />
                 <p className={styles.drawerText}>Resume</p>
               </a>
@@ -136,7 +145,6 @@ export default function NavigationLinks({
       <li>
         <a href="#projects">Projects</a>
       </li>
-      {/* TODO: Add resume */}
       <li
         className={`${styles.resumeList} ${scroll && styles.listScrolled}`}
         onMouseEnter={() => setDropdownDisplay(true)}

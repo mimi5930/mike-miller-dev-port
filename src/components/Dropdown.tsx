@@ -3,8 +3,9 @@ import { textOrIconDisplay } from '../utils'
 
 export type Item = {
   name?: string
-  href: string
+  href: React.AnchorHTMLAttributes<HTMLAnchorElement>['href']
   icon?: JSX.Element
+  anchorProps?: Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>
 }
 
 type DropdownProps = React.HTMLAttributes<HTMLUListElement> & {
@@ -30,7 +31,9 @@ export default function Dropdown({
       {items.map((item, index) => {
         return (
           <li className={styles.item} key={index}>
-            <a href={item.href}>{textOrIconDisplay(item, onlyIcons)}</a>
+            <a href={item.href} {...item.anchorProps}>
+              {textOrIconDisplay(item, onlyIcons)}
+            </a>
           </li>
         )
       })}

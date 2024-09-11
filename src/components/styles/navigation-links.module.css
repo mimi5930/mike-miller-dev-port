@@ -80,6 +80,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
+  color: var(--text-color);
 }
 
 .drawerText {
@@ -92,11 +93,6 @@
 
 .hamburgerIconScrolled {
   color: var(--header-bg-color);
-}
-
-.drawerScrolled {
-  background-color: var(--header-bg-color-transparent);
-  backdrop-filter: blur(5px);
 }
 
 @keyframes scroll-from-right {

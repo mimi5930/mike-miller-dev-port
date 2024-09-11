@@ -84,7 +84,7 @@ export default function NavigationLinks({
         <div
           className={`${styles.drawer} ${
             showDisplay && `${styles.drawerShow}`
-          } ${scroll && `${styles.drawerScrolled}`}`}
+          }`}
         >
           <ul className={`${styles.drawerNavContainer}`}>
             <li>
@@ -99,6 +99,7 @@ export default function NavigationLinks({
                 <p className={styles.drawerText}>Projects</p>
               </a>
             </li>
+            {/* TODO: Add resume */}
             <li className={styles.resumeList}>
               <a href="#resume-link" onClick={hamburgerClickHandler}>
                 <FiFile />
@@ -135,6 +136,7 @@ export default function NavigationLinks({
       <li>
         <a href="#projects">Projects</a>
       </li>
+      {/* TODO: Add resume */}
       <li
         className={`${styles.resumeList} ${scroll && styles.listScrolled}`}
         onMouseEnter={() => setDropdownDisplay(true)}

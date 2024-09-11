@@ -12,7 +12,6 @@ export default function ProjectDescription({
   currentProject,
   ...props
 }: ProjectDescriptionProps) {
-  // TODO: Figure out spacing for tech list
   const { title, languages, description } = projects[currentProject]
 
   return (

@@ -86,7 +86,8 @@ button {
   font-weight: 600;
   padding: 0.75rem 1.2rem;
   text-align: center;
-  transition: ease-in 0.2s;
+  transition: all ease-in 0.2s;
+  transition: transform 200ms ease-out;
   box-shadow: var(--box-shadow);
 }
 
@@ -97,4 +98,8 @@ button:hover {
 button:focus {
   outline: 2px solid var(--button-color-active);
   outline-offset: -1px;
+}
+
+button:active {
+  transform: scale(0.9);
 }

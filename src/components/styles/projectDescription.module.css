@@ -74,21 +74,28 @@
   /* top: 10px; */
 }
 
-.languages svg:hover {
+.languages svg:hover,
+.languages img:hover {
   animation: wiggle 700ms alternate infinite;
+}
+
+.languageTextContainer {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 .languageIconContainer {
   position: relative;
 }
 
+.languageText {
+  margin: 0;
+}
+
 .techTitle {
   margin: 0px;
   font-size: 2em;
-}
-
-.languageText {
-  margin-bottom: 19px;
 }
 
 .tooltip {
@@ -102,10 +109,10 @@
   position: absolute;
   z-index: 1;
   width: 120px;
-  bottom: 90%;
+  bottom: 120%;
   left: 50%;
   margin-left: -60px;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 
 .tooltip::after {
@@ -151,6 +158,7 @@
   .projectInfoCard {
     width: 100%;
     background: transparent;
+    backdrop-filter: none;
   }
 
   .projectTitleContainer {

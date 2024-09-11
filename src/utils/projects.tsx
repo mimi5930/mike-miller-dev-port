@@ -8,8 +8,14 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
-  SiChakraui
+  SiChakraui,
+  SiSvelte,
+  SiBootstrap,
+  SiTypescript,
+  SiTailwindcss
 } from 'react-icons/si'
+import { ZodIcon } from '../components/svg'
+import reactPDF from '../img/react-pdf-logo.png'
 
 type ProjectLanguages = {
   title: string
@@ -65,27 +71,60 @@ const projects: Projects = [
         title: 'Express',
         icon: <SiExpress />
       },
-      { title: 'ChartJS, IndexedDB, Service Worker' }
+      { title: 'ChartJS' },
+      { title: 'IndexedDB' },
+      { title: 'Service Worker' }
     ],
     description:
       "Budget Buddy is an app where a user can keep track of their expenses regardless of their internet connection! Just enter any transaction, and the provided information will be stored locally or in a MongoDB database based on the user's internet connection. The graph will adjust based on this input.",
     url: 'https://budget-buddy-01.herokuapp.com/',
     gitHub: 'https://github.com/mimi5930/Budget-Buddy'
   },
+  // {
+  //   title: 'Code Crazy',
+  //   pic: 'code-crazy.png',
+  //   alt: "Code Crazy's homepage",
+  //   languages: [
+  //     { title: 'MySQL', icon: <SiMysql /> },
+  //     { title: 'Handlebars', icon: <SiHandlebarsdotjs /> },
+  //     { title: 'Express', icon: <SiExpress /> }
+  //   ],
+  //   description:
+  //     "Code Crazy was designed for coding nerds around the world! In here, coders can add posts about their favorite... or least favorite aspects of coding. Create an account, log in, and start posting and commenting to your heart's content!",
+  //   url: 'https://code-crazy.herokuapp.com/',
+  //   gitHub: 'https://github.com/mimi5930/code-crazy'
+  // },
   {
-    title: 'Code Crazy',
-    pic: 'code-crazy.png',
-    alt: "Code Crazy's homepage",
+    title: 'Invoice Maker',
+    pic: 'invoice-maker-screenshot.png',
+    alt: "Invoice Maker's homepage",
     languages: [
-      { title: 'MySQL', icon: <SiMysql /> },
-      { title: 'Handlebars', icon: <SiHandlebarsdotjs /> },
-      { title: 'Express', icon: <SiExpress /> }
+      { title: 'React', icon: <SiReact /> },
+      { title: 'TypeScript', icon: <SiTypescript /> },
+      { title: 'TailwindCss', icon: <SiTailwindcss /> },
+      { title: 'Zod', icon: <ZodIcon /> },
+      {
+        title: 'React PDF',
+        icon: (
+          <img
+            alt="React PDF Logo"
+            src={reactPDF}
+            style={{
+              width: 25,
+              height: 25,
+              marginTop: '2px',
+              filter: 'grayscale(100%)'
+            }}
+          />
+        )
+      }
     ],
     description:
-      "Code Crazy was designed for coding nerds around the world! In here, coders can add posts about their favorite... or least favorite aspects of coding. Create an account, log in, and start posting and commenting to your heart's content!",
-    url: 'https://code-crazy.herokuapp.com/',
-    gitHub: 'https://github.com/mimi5930/code-crazy'
+      "Invoice Maker is designed to assist in the creation of a professional, detailed invoice for a musician's personal use.",
+    url: 'https://mimi5930.github.io/invoice-maker',
+    gitHub: 'https://github.com/mimi5930/invoice-maker'
   },
+  // TODO: UPDATE THIS!
   {
     title: 'Mike Miller Violin',
     pic: 'mike-violin.png',
@@ -105,9 +144,10 @@ const projects: Projects = [
     pic: 'kids-visits.png',
     alt: "Kids Visit's homepage",
     languages: [
-      { title: 'HTML', icon: <SiHtml5 /> },
-      { title: 'CSS', icon: <SiCss3 /> },
-      { title: 'Javascript', icon: <SiJavascript /> }
+      { title: 'SvelteKit', icon: <SiSvelte /> },
+      { title: 'TypeScript', icon: <SiTypescript /> },
+      { title: 'Bootstrap', icon: <SiBootstrap /> },
+      { title: 'Zod', icon: <ZodIcon /> }
     ],
     description:
       "Brenda Jacobson's website to provide parents with resources for children.",

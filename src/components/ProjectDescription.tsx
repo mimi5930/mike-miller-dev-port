@@ -14,6 +14,7 @@ export default function ProjectDescription({
 }: ProjectDescriptionProps) {
   // TODO: Figure out spacing for tech list
   const { title, languages, description } = projects[currentProject]
+
   return (
     <div
       className={`${styles.projectInfoCard} ${
@@ -27,7 +28,7 @@ export default function ProjectDescription({
           <h2 className={styles.techTitle}>Tech:</h2>
           <div className={styles.languageList}>
             {languages.map(language => {
-              if (language.icon !== null) {
+              if (language.icon) {
                 return (
                   <div
                     className={styles.languageIconContainer}
@@ -37,14 +38,18 @@ export default function ProjectDescription({
                     <p className={styles.languages}>{language.icon}</p>
                   </div>
                 )
-              } else {
-                return (
-                  <p className={styles.languageText} key={language.title}>
-                    {language.title}
-                  </p>
-                )
               }
             })}
+            <div className={styles.languageTextContainer}>
+              {languages.map(language => {
+                if (!language.icon)
+                  return (
+                    <p className={styles.languageText} key={language.title}>
+                      {language.title}
+                    </p>
+                  )
+              })}
+            </div>
           </div>
         </div>
       </div>

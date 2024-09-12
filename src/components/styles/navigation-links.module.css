@@ -35,7 +35,7 @@
 
 .listScrolled {
   color: var(--header-bg-color);
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 /* HAMBURGER MENU */
@@ -110,5 +110,24 @@
   }
   100% {
     transform: translateX(1000px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .resumeList {
+    color: var(--text-color);
+  }
+
+  .listScrolled {
+    color: var(--text-color);
+    /* font-weight: bold; */
+  }
+
+  .hamburgerIconScrolled {
+    color: var(--text-color);
+  }
+
+  .drawer {
+    background-color: var(--header-bg-color-dm);
   }
 }

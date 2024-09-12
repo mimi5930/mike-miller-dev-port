@@ -40,3 +40,10 @@
     opacity: 1;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .dialogue {
+    background-color: var(--box-color-dm);
+    color: var(--text-color-dm);
+  }
+}

@@ -36,5 +36,22 @@
 .containerScrolled h1,
 .containerScrolled a {
   color: var(--header-bg-color);
-  font-weight: bold;
+  /* font-weight: bold; */
+}
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: var(--header-bg-color-dm);
+  }
+
+  .containerScrolled {
+    background-color: var(--header-bg-color-transparent-dm);
+  }
+
+  .containerScrolled h1,
+  .containerScrolled a {
+    color: var(--text-color);
+  }
 }

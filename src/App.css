@@ -22,6 +22,17 @@
   --text-font: 'Baloo 2', cursive;
   /* Animations */
   --scroll-transition: all 0.4s ease-in;
+  /* Dark Mode */
+  --main-bg-color-one-dm: #114945;
+  --main-bg-color-two-dm: #259d92;
+  --main-bg-color-three-dm: #bb6c00;
+  --header-bg-color-dm: #1e3842;
+  --header-bg-color-transparent-dm: #15171827;
+  --box-color-dm: #191b1d;
+  --box-color-transparent-dm: #202325c9;
+  --text-color-dm: #d9e2e7;
+  --button-color-dm: #1c849d;
+  --button-color-active-dm: #1d4e4c;
 }
 
 body {
@@ -102,4 +113,24 @@ button:focus {
 
 button:active {
   transform: scale(0.9);
+}
+
+@media (prefers-color-scheme: dark) {
+  .app {
+    background: var(--header-bg-color-dm);
+    background-image: none;
+  }
+
+  button {
+    background-color: var(--button-color-dm);
+    color: var(--text-color-dm);
+  }
+
+  button:hover {
+    background-color: var(--button-color-active-dm);
+  }
+
+  button:focus {
+    outline: 2px solid var(--button-color-active-dm);
+  }
 }

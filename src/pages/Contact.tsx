@@ -139,10 +139,12 @@ export default function Contact() {
         </button>
       </form>
       <Dialogue
+        // success={false} // Test
         success={success}
         ref={dialogRef}
         toggleDialogue={toggleDialogue}
       />
+      {/* <button onClick={toggleDialogue}>Test dialog</button> // Test */}
     </div>
   )
 }

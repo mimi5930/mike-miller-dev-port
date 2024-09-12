@@ -61,3 +61,10 @@
     width: 80vw;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .titleContainer {
+    background-color: var(--box-color-dm);
+    color: white;
+  }
+}

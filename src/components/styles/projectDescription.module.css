@@ -9,7 +9,7 @@
   width: 40%;
   max-width: 1000px;
   transition: all ease-in 0.3s;
-  right: 0;
+  right: 0px;
   background: var(--box-color);
   backdrop-filter: blur(5px);
 }
@@ -171,5 +171,37 @@
 
   .descriptionContainer {
     margin: 6px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .projectTitleContainer {
+    background: var(--box-color-transparent-dm);
+    color: white;
+  }
+
+  .descriptionContainer {
+    background: var(--box-color-transparent-dm);
+    color: white;
+  }
+
+  .projectInfoCard {
+    background-color: var(--box-color-dm);
+  }
+
+  .projectInfoCard::after {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--box-color-dm) 100%
+    );
+  }
+}
+
+@media only screen and (max-width: 900px),
+  only screen and (max-height: 1120px) {
+  .projectInfoCard {
+    background: transparent;
+    backdrop-filter: none;
   }
 }

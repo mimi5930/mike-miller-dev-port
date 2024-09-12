@@ -186,3 +186,15 @@ input:-webkit-autofill:active {
     margin-left: 25px;
   }
 }
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+  .form {
+    background-color: var(--box-color-dm);
+  }
+
+  .pageTitle {
+    color: var(--text-color-dm);
+  }
+}

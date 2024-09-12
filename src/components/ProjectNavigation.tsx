@@ -1,5 +1,10 @@
 import styles from './styles/projectNavigation.module.css'
-import { FiGithub, FiGlobe } from 'react-icons/fi'
+import {
+  FiChevronLeft,
+  FiChevronRight,
+  FiGithub,
+  FiGlobe
+} from 'react-icons/fi'
 import { useMediaQuery } from '../utils/hooks/useMediaQuery'
 import { type Projects } from '../utils'
 
@@ -32,7 +37,9 @@ export default function ProjectNavigation({
 
   return (
     <div className={styles.projectNavigation}>
-      <button onClick={prevProject}>{'<'}</button>
+      <button onClick={prevProject}>
+        <FiChevronLeft />
+      </button>
       <div className={styles.links}>
         <button>
           <a href={url}>
@@ -57,7 +64,9 @@ export default function ProjectNavigation({
           </a>
         </button>
       </div>
-      <button onClick={nexProject}>{'>'}</button>
+      <button onClick={nexProject}>
+        <FiChevronRight />
+      </button>
     </div>
   )
 }

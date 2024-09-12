@@ -14,8 +14,16 @@ import {
   SiTypescript,
   SiTailwindcss
 } from 'react-icons/si'
-import { ZodIcon } from '../components/svg'
+import { ChartJSIcon, ZodIcon } from '../components/svg'
 import reactPDF from '../img/react-pdf-logo.png'
+import styles from './projects.module.css'
+
+const imgStyles: React.HTMLAttributes<HTMLImageElement>['style'] = {
+  width: 25,
+  height: 25,
+  marginTop: '2px',
+  filter: 'grayscale(100%)'
+}
 
 type ProjectLanguages = {
   title: string
@@ -71,7 +79,7 @@ const projects: Projects = [
         title: 'Express',
         icon: <SiExpress />
       },
-      { title: 'ChartJS' },
+      { title: 'ChartJS', icon: <ChartJSIcon /> },
       { title: 'IndexedDB' },
       { title: 'Service Worker' }
     ],
@@ -106,16 +114,7 @@ const projects: Projects = [
       {
         title: 'React PDF',
         icon: (
-          <img
-            alt="React PDF Logo"
-            src={reactPDF}
-            style={{
-              width: 25,
-              height: 25,
-              marginTop: '2px',
-              filter: 'grayscale(100%)'
-            }}
-          />
+          <img alt="React PDF Logo" src={reactPDF} className={styles.image} />
         )
       }
     ],

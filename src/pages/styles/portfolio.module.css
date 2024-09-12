@@ -19,7 +19,7 @@
   height: 70%;
   overflow: hidden;
   display: flex;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: var(--box-shadow);
   position: relative;
 }
@@ -44,5 +44,11 @@
 @media (prefers-reduced-motion) {
   .image {
     transition: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .pageTitle {
+    color: var(--text-color-dm);
   }
 }

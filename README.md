@@ -2,7 +2,7 @@
 
 # Michael Miller Developer Portfolio
 
-![screenshot of the website's landing page](./src//img/portfolio-screenshot.png)
+[![screenshot of the website's landing page](./src//img/portfolio-screenshot.png)][websiteUrl]
 
 ## Built with
 
@@ -59,7 +59,7 @@ If you have any questions please email me at mikej.miller440@gmail.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[version]: https://img.shields.io/badge/Version-2.0-green?style=flat-square
+[version]: https://img.shields.io/badge/Version-2.01-green?style=flat-square
 [reactBadge]: https://img.shields.io/badge/React-4A4A55?logo=react
 [ReactUrl]: https://react.dev/
 [viteBadge]: https://img.shields.io/badge/Vite-gray?logo=vite

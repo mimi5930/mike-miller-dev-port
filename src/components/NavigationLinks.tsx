@@ -8,14 +8,19 @@ import {
   FiInfo,
   FiFile,
   FiMail,
-  FiArrowDown
+  FiArrowDown,
+  FiGithub,
+  FiLinkedin
 } from 'react-icons/fi'
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
 import resumePDF from '../files/Michael Miller Software Engineer Resume 2022.pdf'
+import { MoonIcon } from './svg'
+import SunIcon from './svg/sun'
 
 type NavigationLinksProps = {
   smallScreen: boolean
   scroll: boolean
+  setPrefersDarkMode: React.Dispatch<React.SetStateAction<boolean>>
+  prefersDarkMode: boolean
 }
 
 const resumeDropdown: Item[] = [
@@ -41,26 +46,15 @@ const socialIcons: Item[] = [
 
 export default function NavigationLinks({
   smallScreen,
-  scroll
+  scroll,
+  setPrefersDarkMode,
+  prefersDarkMode
 }: NavigationLinksProps) {
   const [dropdownDisplay, setDropdownDisplay] = useState(false)
   const [showDisplay, setShowDisplay] = useState(false)
   const [hamburgerIcon, setHamburgerIcon] = useState(true)
   const [currentIcon, setIcon] = useState(0)
   const [socialDropdownDisplay, setSocialDropdownDisplay] = useState(false)
-  const [prefersDarkMode, setPrefersDarkMode] = useState<boolean>(
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  )
-
-  useEffect(() => {
-    if (prefersDarkMode) {
-      console.log('enabled dark mode')
-      document.documentElement.setAttribute('data-theme', 'light')
-    } else {
-      console.log('enabled light mode')
-      document.documentElement.setAttribute('data-theme', 'light')
-    }
-  }, [prefersDarkMode])
 
   useEffect(() => {
     if (!smallScreen) {
@@ -152,7 +146,13 @@ export default function NavigationLinks({
   return (
     <ul className={styles.containerList}>
       <li>
-        <button className={styles.colorPrefButton}>Test</button>
+        <button
+          onClick={() => setPrefersDarkMode(!prefersDarkMode)}
+          className={styles.colorPrefButton}
+        >
+          <MoonIcon />
+          <SunIcon />
+        </button>
       </li>
       <li>
         <a href="#about">About</a>

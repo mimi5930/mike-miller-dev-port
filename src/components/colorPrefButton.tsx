@@ -1,3 +1,5 @@
+import { MoonIcon, SunIcon } from './svg'
+
 type DarkModeButtonProps = {
   prefersDarkMode: boolean
   setPrefersDarkMode: React.Dispatch<React.SetStateAction<boolean>>
@@ -14,7 +16,7 @@ export default function DarkModeButton({
         setPrefersDarkMode(!prefersDarkMode)
       }}
     >
-      {prefersDarkMode ? <Moon /> : <Sun />}
+      {prefersDarkMode ? <MoonIcon /> : <SunIcon />}
     </button>
   )
 }

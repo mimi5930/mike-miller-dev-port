@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Sriracha&display=swap');
 
-:root {
+body {
+  margin: 0;
   --main-bg-color-one: #cbf3f0;
   --main-bg-color-two: #2ec4b6;
   --main-bg-color-three: #ff9f1c;
@@ -33,10 +34,6 @@
   --text-color-dm: #d9e2e7;
   --button-color-dm: #1c849d;
   --button-color-active-dm: #1d4e4c;
-}
-
-body {
-  margin: 0;
 }
 
 html {
@@ -77,6 +74,11 @@ p {
   z-index: 0;
 }
 
+.app[data-theme='dark'] {
+  background-image: none;
+  background: var(--header-bg-color-dm);
+}
+
 .project-box:hover {
   opacity: 75%;
   transition: 300ms;
@@ -115,12 +117,9 @@ button:active {
   transform: scale(0.9);
 }
 
-@media (prefers-color-scheme: dark) {
-  .app {
-    background: var(--header-bg-color-dm);
-    background-image: none;
-  }
+/* DARK MODE */
 
+[data-theme='dark'] {
   button {
     background-color: var(--button-color-dm);
     color: var(--text-color-dm);

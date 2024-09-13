@@ -1,3 +1,4 @@
+/* TODO: This is having weird issues with the border radius */
 .projectInfoCard {
   position: absolute;
   display: flex;
@@ -7,7 +8,6 @@
   gap: 8px;
   height: 100%;
   width: 40%;
-  max-width: 1000px;
   transition: all ease-in 0.3s;
   right: 0px;
   background: var(--box-color);
@@ -174,7 +174,9 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* DARK MODE */
+
+[data-theme='dark'] {
   .projectTitleContainer {
     background: var(--box-color-transparent-dm);
     color: white;
@@ -200,8 +202,10 @@
 
 @media only screen and (max-width: 900px),
   only screen and (max-height: 1120px) {
-  .projectInfoCard {
-    background: transparent;
-    backdrop-filter: none;
+  [data-theme='dark'] {
+    .projectInfoCard {
+      background-color: transparent;
+      backdrop-filter: none;
+    }
   }
 }

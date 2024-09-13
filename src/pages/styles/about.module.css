@@ -62,7 +62,9 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* DARK MODE */
+
+[data-theme='dark'] {
   .titleContainer {
     background-color: var(--box-color-dm);
     color: white;

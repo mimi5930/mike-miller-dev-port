@@ -7,7 +7,7 @@ import Spacer from './components/Spacer'
 
 function App() {
   return (
-    <div className="app">
+    <div className="app" data-theme="dark">
       <Navbar></Navbar>
       <About></About>
       <Portfolio></Portfolio>

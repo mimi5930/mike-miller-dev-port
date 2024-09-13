@@ -5,7 +5,9 @@
   filter: grayscale(100%);
 }
 
-@media (prefers-color-scheme: dark) {
+/* DARK MODE */
+
+[data-theme='dark'] {
   .image {
     filter: grayscale(1) invert(1);
   }

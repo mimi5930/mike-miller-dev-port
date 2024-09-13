@@ -189,7 +189,7 @@ input:-webkit-autofill:active {
 
 /* DARK MODE */
 
-@media (prefers-color-scheme: dark) {
+[data-theme='dark'] {
   .form {
     background-color: var(--box-color-dm);
   }

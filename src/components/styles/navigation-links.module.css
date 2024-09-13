@@ -27,6 +27,16 @@
   opacity: 1;
 }
 
+.colorPrefButton,
+.colorPrefButton:hover,
+.colorPrefButton:focus {
+  all: unset;
+  cursor: pointer;
+}
+
+.colorPrefButton {
+}
+
 .resumeList {
   color: var(--text-color);
   cursor: default;
@@ -113,7 +123,9 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* DARK MODE */
+
+[data-theme='dark'] {
   .resumeList {
     color: var(--text-color);
   }

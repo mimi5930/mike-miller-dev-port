@@ -26,7 +26,6 @@ const resumeDropdown: Item[] = [
   },
   { name: 'Download PDF', href: resumePDF, anchorProps: { download: true } }
 ]
-
 const socialIcons: Item[] = [
   {
     name: 'GitHub',
@@ -49,6 +48,19 @@ export default function NavigationLinks({
   const [hamburgerIcon, setHamburgerIcon] = useState(true)
   const [currentIcon, setIcon] = useState(0)
   const [socialDropdownDisplay, setSocialDropdownDisplay] = useState(false)
+  const [prefersDarkMode, setPrefersDarkMode] = useState<boolean>(
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  )
+
+  useEffect(() => {
+    if (prefersDarkMode) {
+      console.log('enabled dark mode')
+      document.documentElement.setAttribute('data-theme', 'light')
+    } else {
+      console.log('enabled light mode')
+      document.documentElement.setAttribute('data-theme', 'light')
+    }
+  }, [prefersDarkMode])
 
   useEffect(() => {
     if (!smallScreen) {
@@ -139,6 +151,9 @@ export default function NavigationLinks({
 
   return (
     <ul className={styles.containerList}>
+      <li>
+        <button className={styles.colorPrefButton}>Test</button>
+      </li>
       <li>
         <a href="#about">About</a>
       </li>

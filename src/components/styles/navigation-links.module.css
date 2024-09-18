@@ -27,29 +27,6 @@
   opacity: 1;
 }
 
-.colorPrefButton,
-.colorPrefButton:hover,
-.colorPrefButton:focus {
-  all: unset;
-  cursor: pointer;
-  background-color: transparent !important;
-  overflow: hidden;
-}
-
-.colorPrefIcon {
-  animation: sunset infinite 1000ms ease-in;
-}
-
-@keyframes sunset {
-  0% {
-    transform: rotate(0deg);
-    transform: rotateX('angle');
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
 .resumeList {
   color: var(--text-color);
   cursor: default;

@@ -1,0 +1,52 @@
+.colorPrefButton,
+.colorPrefButton:hover,
+.colorPrefButton:focus {
+  all: unset;
+  cursor: pointer;
+  background-color: transparent !important;
+  outline-style: none !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.moonIcon {
+  translate: 0 -110%;
+  opacity: 0;
+  transition: translate 1s, opacity 0.4s;
+}
+
+.sunIcon {
+  position: absolute;
+  translate: 0;
+  opacity: 1;
+  transition: translate 1s, opacity 0.4s;
+}
+
+.colorPrefScrolled,
+.colorPrefScrolled:hover,
+.colorPrefScrolled:focus {
+  color: var(--header-bg-color);
+}
+
+[data-theme='dark'] {
+  .sunIcon {
+    translate: 0 110%;
+    opacity: 0;
+  }
+
+  .moonIcon {
+    translate: 0;
+    opacity: 1;
+  }
+
+  .colorPrefScrolled,
+  .colorPrefScrolled:hover,
+  .colorPrefScrolled:focus {
+    color: var(--text-color);
+  }
+}

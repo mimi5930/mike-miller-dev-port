@@ -15,6 +15,7 @@ import {
 import resumePDF from '../files/Michael Miller Software Engineer Resume 2022.pdf'
 import { MoonIcon } from './svg'
 import SunIcon from './svg/sun'
+import ColorPrefButton from './ColorPrefButton'
 
 type NavigationLinksProps = {
   smallScreen: boolean
@@ -146,15 +147,6 @@ export default function NavigationLinks({
   return (
     <ul className={styles.containerList}>
       <li>
-        <button
-          onClick={() => setPrefersDarkMode(!prefersDarkMode)}
-          className={styles.colorPrefButton}
-        >
-          <MoonIcon />
-          <SunIcon />
-        </button>
-      </li>
-      <li>
         <a href="#about">About</a>
       </li>
       <li>
@@ -186,6 +178,13 @@ export default function NavigationLinks({
       </li>
       <li>
         <a href="#contact">Contact</a>
+      </li>
+      <li>
+        <ColorPrefButton
+          scroll={scroll}
+          prefersDarkMode={prefersDarkMode}
+          setPrefersDarkMode={setPrefersDarkMode}
+        />
       </li>
     </ul>
   )

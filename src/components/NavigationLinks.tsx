@@ -13,7 +13,7 @@ import {
   FiLinkedin
 } from 'react-icons/fi'
 import resumePDF from '../files/Michael Miller Software Engineer Resume 2022.pdf'
-import ColorPrefButton from './ColorPrefButton'
+import ColorPrefButton from './colorPrefButton'
 
 type NavigationLinksProps = {
   smallScreen: boolean

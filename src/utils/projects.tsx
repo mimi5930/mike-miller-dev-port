@@ -18,13 +18,6 @@ import { ChartJSIcon, ZodIcon } from '../components/svg'
 import reactPDF from '../img/react-pdf-logo.png'
 import styles from './projects.module.css'
 
-const imgStyles: React.HTMLAttributes<HTMLImageElement>['style'] = {
-  width: 25,
-  height: 25,
-  marginTop: '2px',
-  filter: 'grayscale(100%)'
-}
-
 type ProjectLanguages = {
   title: string
   icon?: JSX.Element

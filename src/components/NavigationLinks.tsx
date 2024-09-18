@@ -13,8 +13,6 @@ import {
   FiLinkedin
 } from 'react-icons/fi'
 import resumePDF from '../files/Michael Miller Software Engineer Resume 2022.pdf'
-import { MoonIcon } from './svg'
-import SunIcon from './svg/sun'
 import ColorPrefButton from './ColorPrefButton'
 
 type NavigationLinksProps = {
@@ -75,6 +73,7 @@ export default function NavigationLinks({
     setHamburgerIcon(!hamburgerIcon)
   }
 
+  // Small Screen
   if (smallScreen) {
     return (
       <>
@@ -93,6 +92,7 @@ export default function NavigationLinks({
             onClick={hamburgerClickHandler}
           ></FiX>
         )}
+
         <div
           className={`${styles.drawer} ${
             showDisplay && `${styles.drawerShow}`
@@ -138,12 +138,21 @@ export default function NavigationLinks({
                 </li>
               )
             })}
+            <li className={styles.colorPrefLi}>
+              <ColorPrefButton
+                scroll={scroll}
+                prefersDarkMode={prefersDarkMode}
+                setPrefersDarkMode={setPrefersDarkMode}
+                isDropdown
+              />
+            </li>
           </ul>
         </div>
       </>
     )
   }
 
+  // Not a small screen
   return (
     <ul className={styles.containerList}>
       <li>

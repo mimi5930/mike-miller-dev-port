@@ -5,19 +5,21 @@ type ColorPrefButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
   prefersDarkMode: boolean
   setPrefersDarkMode: React.Dispatch<React.SetStateAction<boolean>>
   scroll: boolean
+  isDropdown?: boolean
 }
 
 export default function ColorPrefButton({
   prefersDarkMode,
   setPrefersDarkMode,
   scroll,
+  isDropdown = false,
   ...props
 }: ColorPrefButtonProps) {
   return (
     <button
       onClick={() => setPrefersDarkMode(!prefersDarkMode)}
       className={`${styles.colorPrefButton} ${
-        scroll && styles.colorPrefScrolled
+        scroll && !isDropdown && styles.colorPrefScrolled
       } ${props.className && props.className}`}
       {...props}
     >

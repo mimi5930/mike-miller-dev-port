@@ -33,6 +33,11 @@
   transition: all 0.2s;
 }
 
+.colorPrefLi {
+  display: flex;
+  justify-content: center;
+}
+
 .listScrolled {
   color: var(--header-bg-color);
   /* font-weight: bold; */

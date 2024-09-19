@@ -1,6 +1,13 @@
 import styles from './styles/portfolio.module.css'
 import { useState } from 'react'
-import { importImage, projects } from '../utils'
+import {
+  importImage,
+  projects,
+  prevProject,
+  nextProject,
+  handleTouchStart,
+  handleTouchMove
+} from '../utils'
 import {
   IndexCircles,
   ProjectDescription,
@@ -10,11 +17,26 @@ import {
 export default function Portfolio() {
   // sets index for current project
   const [currentProject, setCurrentProject] = useState(0)
+  const [touchPosition, setTouchPosition] = useState<number | null>(null)
 
   return (
     <section id="projects" className={styles.section}>
       <h1 className={styles.pageTitle}>Featured Projects</h1>
-      <div className={styles.imageContainer}>
+      <div
+        className={styles.imageContainer}
+        onTouchStart={event => handleTouchStart(event, setTouchPosition)}
+        onTouchMove={event =>
+          handleTouchMove(
+            event,
+            touchPosition,
+            () =>
+              nextProject(projects.length, currentProject, setCurrentProject),
+            () =>
+              prevProject(projects.length, currentProject, setCurrentProject),
+            setTouchPosition
+          )
+        }
+      >
         {projects.map((project, index) => {
           return (
             <img

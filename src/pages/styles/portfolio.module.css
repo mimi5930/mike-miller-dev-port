@@ -35,10 +35,10 @@
   transition: translate 600ms ease-in-out;
   clip-path: polygon(
     0 0,
-    95% 0,
+    97% 0,
     100% 5%,
-    100% 95%,
-    95% 100%,
+    100% 97%,
+    97% 100%,
     0 100%,
     0% 80%,
     0% 20%
@@ -48,6 +48,10 @@
 @media only screen and (max-width: 900px) {
   .pageTitle {
     font-size: 2em;
+  }
+
+  .image {
+    clip-path: none;
   }
 }
 

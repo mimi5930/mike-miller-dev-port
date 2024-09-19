@@ -5,8 +5,8 @@ import {
   FiGithub,
   FiGlobe
 } from 'react-icons/fi'
-import { useMediaQuery } from '../utils/hooks/useMediaQuery'
-import { type Projects } from '../utils'
+import { useMediaQuery } from '../utils/hooks'
+import { type Projects, prevProject, nextProject } from '../utils'
 
 type ProjectNavigationProps = {
   projects: Projects
@@ -21,23 +21,15 @@ export default function ProjectNavigation({
 }: ProjectNavigationProps) {
   const smallerScreen = useMediaQuery('(max-width: 900px)')
 
-  function prevProject() {
-    currentProject === 0
-      ? setCurrentProject(projects.length - 1)
-      : setCurrentProject(currentProject - 1)
-  }
-
-  function nexProject() {
-    currentProject === projects.length - 1
-      ? setCurrentProject(0)
-      : setCurrentProject(currentProject + 1)
-  }
-
   const { url, gitHub } = projects[currentProject]
 
   return (
     <div className={styles.projectNavigation}>
-      <button onClick={prevProject}>
+      <button
+        onClick={() =>
+          prevProject(projects.length, currentProject, setCurrentProject)
+        }
+      >
         <FiChevronLeft />
       </button>
       <div className={styles.links}>
@@ -64,7 +56,11 @@ export default function ProjectNavigation({
           </a>
         </button>
       </div>
-      <button onClick={nexProject}>
+      <button
+        onClick={() =>
+          nextProject(projects.length, currentProject, setCurrentProject)
+        }
+      >
         <FiChevronRight />
       </button>
     </div>

@@ -1,4 +1,4 @@
-/* TODO: This is having weird issues with the border radius */
+/* TODO: This is having weird issues with the border radius on motion*/
 .projectInfoCard {
   position: absolute;
   display: flex;

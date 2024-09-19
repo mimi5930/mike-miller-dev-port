@@ -59,7 +59,7 @@ If you have any questions please email me at mikej.miller440@gmail.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[version]: https://img.shields.io/badge/Version-2.1-green?style=flat-square
+[version]: https://img.shields.io/badge/Version-2.2-green?style=flat-square
 [reactBadge]: https://img.shields.io/badge/React-4A4A55?logo=react
 [ReactUrl]: https://react.dev/
 [viteBadge]: https://img.shields.io/badge/Vite-gray?logo=vite

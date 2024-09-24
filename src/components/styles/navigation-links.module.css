@@ -44,13 +44,7 @@
   /* font-weight: bold; */
 }
 
-/* HAMBURGER MENU */
-
-.hamburgerIcon {
-  font-size: 2em;
-  margin-right: 20px;
-  transition: var(--scroll-transition);
-}
+/* Drawer */
 
 .drawer {
   position: absolute;
@@ -95,12 +89,6 @@
   font-weight: bold;
 }
 
-/* HAMBURGER MENU SCROLLED */
-
-.hamburgerIconScrolled {
-  color: var(--header-bg-color);
-}
-
 @keyframes scroll-from-right {
   0% {
     transform: translateX(1000px);
@@ -129,10 +117,6 @@
   .listScrolled {
     color: var(--text-color);
     /* font-weight: bold; */
-  }
-
-  .hamburgerIconScrolled {
-    color: var(--text-color);
   }
 
   .drawer {

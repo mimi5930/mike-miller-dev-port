@@ -2,8 +2,6 @@ import styles from './styles/navigation-links.module.css'
 import { useState, useEffect } from 'react'
 import Dropdown, { type Item } from './Dropdown'
 import {
-  FiMenu,
-  FiX,
   FiFolder,
   FiInfo,
   FiFile,
@@ -14,6 +12,7 @@ import {
 } from 'react-icons/fi'
 import resumePDF from '../files/Michael Miller Software Engineer Resume 2022.pdf'
 import ColorPrefButton from './colorPrefButton'
+import HamburgerIcon from './HamburgerIcon'
 
 type NavigationLinksProps = {
   smallScreen: boolean
@@ -77,22 +76,11 @@ export default function NavigationLinks({
   if (smallScreen) {
     return (
       <>
-        {hamburgerIcon ? (
-          <FiMenu
-            className={`${styles.hamburgerIcon} ${
-              scroll && styles.hamburgerIconScrolled
-            }`}
-            onClick={hamburgerClickHandler}
-          ></FiMenu>
-        ) : (
-          <FiX
-            className={`${styles.hamburgerIcon} ${
-              scroll && styles.hamburgerIconScrolled
-            }`}
-            onClick={hamburgerClickHandler}
-          ></FiX>
-        )}
-
+        <HamburgerIcon
+          show={hamburgerIcon}
+          scroll={scroll}
+          onClick={hamburgerClickHandler}
+        />
         <div
           className={`${styles.drawer} ${
             showDisplay && `${styles.drawerShow}`

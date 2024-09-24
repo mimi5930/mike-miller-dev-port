@@ -1,0 +1,16 @@
+.hamburgerIcon {
+  font-size: 2em;
+  margin-right: 20px;
+  transition: var(--scroll-transition);
+  cursor: pointer;
+}
+
+.hamburgerIconScrolled {
+  color: var(--header-bg-color);
+}
+
+[data-theme='dark'] {
+  .hamburgerIconScrolled {
+    color: var(--text-color);
+  }
+}

@@ -115,7 +115,7 @@ export default function Contact() {
             rows={4}
             aria-invalid={errors.message ? 'true' : 'false'}
             placeholder={
-              errors.message ? errors.message?.message : 'Your email'
+              errors.message ? errors.message?.message : 'Your message'
             }
           />
           {!errors.message ? (
